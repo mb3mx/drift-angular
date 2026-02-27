@@ -1,5 +1,5 @@
 import {Component, HostBinding, HostListener, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 import {SettingsService} from '@app/settings/settings.service';
 import {AuthService} from '@app/layouts/auth-layout/auth.service';

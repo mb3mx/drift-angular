@@ -1,6 +1,6 @@
 import {Component, HostBinding, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 import {Location} from '@angular/common';
 
 import {SettingsService} from '@app/settings/settings.service';

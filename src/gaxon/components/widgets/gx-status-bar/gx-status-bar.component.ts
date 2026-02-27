@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, OnDestroy, OnInit} from '@angular/core';
-import {Subject} from 'rxjs/Subject';
-import {timer} from 'rxjs/observable/timer';
+import {Subject} from 'rxjs';
+import {timer} from 'rxjs';
 import {switchMap, startWith, scan, takeWhile, takeUntil, mapTo} from 'rxjs/operators';
 import {appAnimations} from '../../../mix/animations';
 
@@ -51,8 +51,8 @@ export class GxStatusBarComponent implements OnInit, OnDestroy {
     }
   }
 
-  private _counterSub = new Subject();
-  private _onDestroy = new Subject();
+  private _counterSub = new Subject<void>();
+  private _onDestroy = new Subject<void>();
 
   countInterval = 1;
   public currentNumber = 0;

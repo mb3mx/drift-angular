@@ -1,5 +1,5 @@
 import {Component, ElementRef, HostListener, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 import {SettingsService} from '@app/settings/settings.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {BehaviorSubject} from 'rxjs';
 import {NavigationModelInterface} from './navigation.model';
 
 @Injectable()
