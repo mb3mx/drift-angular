@@ -112,7 +112,7 @@
           @include border-right-radius(0);
         }
 
-        & > [data-toggle="main-sidebar"] {
+        & > [data-bs-toggle="main-sidebar"] {
           display: none;
         }
       }

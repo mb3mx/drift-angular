@@ -43,13 +43,13 @@
 
 // Cursor pointer
 .cursor-pointer,
-.input-group [data-toggle="datetimepicker"],
-[data-toggle='mdrawer'],
+.input-group [data-bs-toggle="datetimepicker"],
+[data-bs-toggle='mdrawer'],
 [data-switch='mdrawer'],
 [data-dismiss='mdrawer'],
 [data-open='compose'],
 [data-dismiss='compose'],
-[data-toggle='minimize'],
+[data-bs-toggle='minimize'],
 [data-location] {
   cursor: pointer;
 }

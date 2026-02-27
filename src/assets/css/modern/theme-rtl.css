@@ -5601,7 +5601,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-top: 1.2rem !important; }
 
-.mr-3,
+.me-3,
 .mx-3 {
   margin-left: 1.2rem !important; }
 
@@ -5609,7 +5609,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-bottom: 1.2rem !important; }
 
-.ml-3,
+.ms-3,
 .mx-3 {
   margin-right: 1.2rem !important; }
 
@@ -9912,13 +9912,13 @@ a:hover, a:focus {
     display: block; }
 
 .cursor-pointer,
-.input-group [data-toggle="datetimepicker"],
-[data-toggle='mdrawer'],
+.input-group [data-bs-toggle="datetimepicker"],
+[data-bs-toggle='mdrawer'],
 [data-switch='mdrawer'],
 [data-dismiss='mdrawer'],
 [data-open='compose'],
 [data-dismiss='compose'],
-[data-toggle='minimize'],
+[data-bs-toggle='minimize'],
 [data-location] {
   cursor: pointer; }
 
@@ -11910,7 +11910,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
     color: #FF4081;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
-  .dt-sidebar .dt-action-nav__item > [data-toggle="main-sidebar"] {
+  .dt-sidebar .dt-action-nav__item > [data-bs-toggle="main-sidebar"] {
     display: none; }
 
 .dt-sidebar .dt-action-nav__link {
@@ -12071,7 +12071,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
     .dt-sidebar--folded .dt-sidebar__notification .dt-avatar-wrapper {
       transition: none; } }
 
-.dt-sidebar--folded .dt-sidebar .dt-action-nav__item > [data-toggle="main-sidebar"] {
+.dt-sidebar--folded .dt-sidebar .dt-action-nav__item > [data-bs-toggle="main-sidebar"] {
   display: flex; }
 
 .dt-sidebar--folded .dt-sidebar__content {

@@ -16,7 +16,7 @@
 
   & .#{$class-prefix}-sidebar {
     & .#{$class-prefix}-action {
-      &-nav__item > [data-toggle="main-sidebar"] {
+      &-nav__item > [data-bs-toggle="main-sidebar"] {
         display: flex;
       }
     }

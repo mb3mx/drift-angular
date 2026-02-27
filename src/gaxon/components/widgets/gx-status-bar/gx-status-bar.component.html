@@ -1,5 +1,5 @@
 <span *ngIf="barPosition === 'end' && !_hideCounter"
-      class="dt-indicator-item__count text-nowrap mr-3"
+      class="dt-indicator-item__count text-nowrap me-3"
       [ngClass]="textColor">{{prefix + currentNumber + percentText + suffix}}</span>
 
 
@@ -19,7 +19,7 @@
      [@toggleWidth]="{value: state, params: {newWidth: statusBarWidth}}"></div>
 
 <span *ngIf="barPosition === 'start' && !_hideCounter"
-      class="dt-indicator-item__count text-nowrap ml-3"
+      class="dt-indicator-item__count text-nowrap ms-3"
       [ngClass]="textColor">{{prefix + currentNumber + percentText}}</span>
 
 <span *ngIf="barPosition === 'start' && suffix" class="d-inline-block"

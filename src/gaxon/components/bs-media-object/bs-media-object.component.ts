@@ -45,8 +45,8 @@ export class BsMediaObjectComponent implements OnInit, AfterViewInit {
     // set media order
     if (!_mediaImg.order) _mediaImg.order = 'top';
     if (!_mediaImg.classlist) {
-      if (_mediaImg.order === 'top') _mediaImg.classlist = 'mr-3';
-      else _mediaImg.classlist = 'ml-3';
+      if (_mediaImg.order === 'top') _mediaImg.classlist = 'me-3';
+      else _mediaImg.classlist = 'ms-3';
     }
 
     return _mediaImg;
