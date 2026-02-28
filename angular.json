@@ -83,10 +83,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "drift-angular:build:production"
+              "buildTarget": "drift-angular:build:production"
             },
             "development": {
-              "browserTarget": "drift-angular:build:development"
+              "buildTarget": "drift-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,7 +94,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "drift-angular:build"
+            "buildTarget": "drift-angular:build"
           }
         },
         "test": {
