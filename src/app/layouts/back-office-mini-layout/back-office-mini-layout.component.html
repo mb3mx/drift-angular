@@ -2,13 +2,9 @@
 <main class="dt-main">
 
   <!-- NAVBAR: Left -->
-  <app-navbar-vertical
-    [perfectScrollbar]="{wheelPropagation: !settings.navigationFixed}"
-    [disabled]="!settings.customScrollbars"></app-navbar-vertical>
+  <app-navbar-vertical></app-navbar-vertical>
 
-  <div
-    *ngIf="settings.activeNavDrawer"
-    class="dt-backdrop" (click)="onClickOverlay()"></div>
+  <div *ngIf="settings.activeNavDrawer" class="dt-backdrop" (click)="onClickOverlay()"></div>
   <!-- / NAVBAR: Left -->
 
   <!-- Site Content -->

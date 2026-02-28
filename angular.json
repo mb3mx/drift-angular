@@ -26,23 +26,20 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-			"allowedCommonJsDependencies": [
-				"lodash"
-     	    ],
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/vendor/gaxon-icon/styles.css",
               "node_modules/quill/dist/quill.snow.css",
               "node_modules/quill/dist/quill.bubble.css",
-               ],
-            "scripts": [
-              
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -52,7 +49,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-
               "budgets": [
                 {
                   "type": "initial",
@@ -64,37 +60,36 @@
                   "maximumWarning": "350kb",
                   "maximumError": "500kb"
                 }
-            ],
+              ],
               "optimization": {
                 "styles": {
                   "inlineCritical": false
                 }
               },
-	            "outputHashing": "all",
+              "outputHashing": "all"
             },
-	               "development": {
+            "development": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-	                  }
+            }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-
           "configurations": {
             "production": {
               "browserTarget": "drift-angular:build:production"
             },
-	     "development": {
+            "development": {
               "browserTarget": "drift-angular:build:development"
             }
           },
-	  "defaultConfiguration": "development"
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -120,10 +115,7 @@
             "scripts": []
           }
         }
-
       }
     }
   },
-  "defaultProject": "drift-angular",
-
 }

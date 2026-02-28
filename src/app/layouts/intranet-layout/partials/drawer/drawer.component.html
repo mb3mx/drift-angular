@@ -19,9 +19,7 @@
 
         <!-- Menu Item -->
         <li class="dt-action-nav__item" [ngClass]="{'active':activeMenu == 'notifications'}">
-          <a href="javascript:void(0)"
-             class="dt-action-nav__link"
-             (click)="onSelectMenu($event, 'notifications')">
+          <a href="javascript:void(0)" class="dt-action-nav__link" (click)="onSelectMenu($event, 'notifications')">
             <gx-icon name="notification2" [fw]="true"></gx-icon>
           </a>
         </li>
@@ -29,9 +27,7 @@
 
         <!-- Menu Item -->
         <li class="dt-action-nav__item" [ngClass]="{'active':activeMenu == 'messages'}">
-          <a href="javascript:void(0)"
-             class="dt-action-nav__link"
-             (click)="onSelectMenu($event, 'messages')">
+          <a href="javascript:void(0)" class="dt-action-nav__link" (click)="onSelectMenu($event, 'messages')">
             <gx-icon name="message" [fw]="true"></gx-icon>
           </a>
         </li>
@@ -39,9 +35,7 @@
 
         <!-- Menu Item -->
         <li class="dt-action-nav__item" [ngClass]="{'active':activeMenu == 'search'}">
-          <a href="javascript:void(0)"
-             class="dt-action-nav__link"
-             (click)="onSelectMenu($event, 'search')">
+          <a href="javascript:void(0)" class="dt-action-nav__link" (click)="onSelectMenu($event, 'search')">
             <gx-icon name="menu-lines-new" size="xl"></gx-icon>
           </a>
         </li>
@@ -58,24 +52,17 @@
 
       <gx-loader [ngClass]="{'active':showLoader}"></gx-loader>
 
-      <div perfectScrollbar
-           [disabled]="!settings.customScrollbars"
-           class="dt-action-content fade position-relative"
-           [ngClass]="{'show':!showLoader && activeMenu == 'search'}">
+      <div class="dt-action-content fade position-relative" [ngClass]="{'show':!showLoader && activeMenu == 'search'}">
         <drawer-search></drawer-search>
       </div>
 
-      <div perfectScrollbar
-           [disabled]="!settings.customScrollbars"
-           class="dt-action-content fade position-relative"
-           [ngClass]="{'show':!showLoader && activeMenu == 'notifications'}">
+      <div class="dt-action-content fade position-relative"
+        [ngClass]="{'show':!showLoader && activeMenu == 'notifications'}">
         <drawer-notifications></drawer-notifications>
       </div>
 
-      <div perfectScrollbar
-           [disabled]="!settings.customScrollbars"
-           class="dt-action-content fade position-relative"
-           [ngClass]="{'show':!showLoader && activeMenu == 'messages'}">
+      <div class="dt-action-content fade position-relative"
+        [ngClass]="{'show':!showLoader && activeMenu == 'messages'}">
         <drawer-messages></drawer-messages>
 
       </div>

@@ -10,7 +10,7 @@
 <!-- /dropdown menu header -->
 
 <!-- Dropdown Menu Body -->
-<div perfectScrollbar [disabled]="!settings.customScrollbars" class="dropdown-menu-body position-relative">
+<div class="dropdown-menu-body position-relative">
 
   <div class="h-auto">
     <!-- Media -->
@@ -24,10 +24,8 @@
       <span class="media-body">
         <span class="message" [innerHTML]="notification.message"></span>
         <span class="meta-date">
-          <gx-icon *ngIf="notification.icon.name"
-                   [name]="notification.icon.name"
-                   [ngClass]="notification.icon.color"
-                   [fw]="true" class="mr-1"></gx-icon>
+          <gx-icon *ngIf="notification.icon.name" [name]="notification.icon.name" [ngClass]="notification.icon.color"
+            [fw]="true" class="mr-1"></gx-icon>
           {{notification.time}}
         </span>
       </span>

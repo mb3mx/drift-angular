@@ -6,7 +6,7 @@
 
     <!-- Brand tool -->
     <div class="dt-brand__tool d-md-none" (click)="toggleNavigation()"
-         [ngClass]="{'active':settings.navigationStyle == 'folded'}">
+      [ngClass]="{'active':settings.navigationStyle == 'folded'}">
       <div class="hamburger-inner"></div>
     </div>
     <!-- /brand tool -->
@@ -104,7 +104,7 @@
           <!-- Dropdown Option -->
           <div ngbDropdownMenu>
             <a href="javascript:void(0)" *ngFor="let lang of languages" (click)="switchLanguage(lang)"
-               class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
+              class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
               <i class="flag-icon mr-2" [ngClass]="lang.flag"></i>
               <span>{{lang.title}}</span>
             </a>
@@ -127,7 +127,7 @@
           <!-- /dropdown link -->
 
           <!-- Dropdown Option -->
-          <my-apps ngbDropdownMenu perfectScrollbar [disabled]="!settings.customScrollbars"></my-apps>
+          <my-apps ngbDropdownMenu></my-apps>
           <!-- /dropdown option -->
 
         </li>
@@ -139,8 +139,7 @@
         <li class="dt-nav__item" placement="bottom-right" ngbDropdown>
 
           <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link no-arrow dt-avatar-wrapper"
-             ngbDropdownToggle>
+          <a href="javascript:void(0)" class="dt-nav__link no-arrow dt-avatar-wrapper" ngbDropdownToggle>
 
             <gx-avatar [user]="currentUser" class="size-50"></gx-avatar>
             <span class="dt-avatar-info d-none d-sm-block pl-3">
@@ -155,9 +154,9 @@
             <div class="dt-avatar-wrapper flex-nowrap p-6 mt-n2 bg-gradient-purple text-white rounded-top.">
               <gx-avatar [user]="currentUser"></gx-avatar>
               <span class="dt-avatar-info">
-                  <span class="dt-avatar-name">{{currentUser.name}}</span>
-                  <span class="f-12">{{currentUser.position}}</span>
-                </span>
+                <span class="dt-avatar-name">{{currentUser.name}}</span>
+                <span class="f-12">{{currentUser.position}}</span>
+              </span>
             </div>
             <a class="dropdown-item" href="javascript:void(0)">
               <gx-icon name="user" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>

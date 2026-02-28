@@ -12,7 +12,7 @@
 <!-- /dropdown menu header -->
 
 <!-- Dropdown Menu Body -->
-<div perfectScrollbar [disabled]="!settings.customScrollbars" class="dropdown-menu-body position-relative">
+<div class="dropdown-menu-body position-relative">
 
   <div class="h-auto">
     <!-- Media -->
@@ -35,13 +35,10 @@
         <ng-template #tipContent>{{message.read ? 'Mark as read' : 'Mark as unread'}}</ng-template>
 
         <!-- Toggle Button -->
-        <span class="toggle-button"
-              data-placement="left"
-              [ngClass]="{'active':message.read}"
-              [ngbTooltip]="tipContent"
-              (click)="message.read = !message.read; $event.stopPropagation()">
+        <span class="toggle-button" data-placement="left" [ngClass]="{'active':message.read}" [ngbTooltip]="tipContent"
+          (click)="message.read = !message.read; $event.stopPropagation()">
           <span class="show"><gx-icon name="dot-o" [fw]="true" class="f-10 text-light-gray"></gx-icon></span>
-          <span class="hide"><gx-icon name="dot" [fw]="true"  class="f-10 text-light-gray"></gx-icon></span>
+          <span class="hide"><gx-icon name="dot" [fw]="true" class="f-10 text-light-gray"></gx-icon></span>
         </span>
         <!-- /toggle button -->
       </span>

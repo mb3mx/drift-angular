@@ -6,9 +6,7 @@
     <!-- Action Bar Header -->
     <div class="dt-action-bar__header">
       <!-- Brand tool -->
-      <div class="dt-brand__tool"
-           [ngClass]="{'active':isNavOpened}"
-           (click)="onToggleNavigation($event)">
+      <div class="dt-brand__tool" [ngClass]="{'active':isNavOpened}" (click)="onToggleNavigation($event)">
         <div class="hamburger-inner"></div>
       </div>
       <!-- /brand tool -->
@@ -20,10 +18,8 @@
 
       <!-- Menu Item -->
       <li class="dt-action-nav__item">
-        <a href="javascript:void(0)"
-           class="dt-action-nav__link"
-           [ngClass]="{'active':activeMenu == 'search'}"
-           (click)="onClickMenu($event, 'search')">
+        <a href="javascript:void(0)" class="dt-action-nav__link" [ngClass]="{'active':activeMenu == 'search'}"
+          (click)="onClickMenu($event, 'search')">
           <gx-icon name="search" size="1x"></gx-icon>
         </a>
       </li>
@@ -31,10 +27,8 @@
 
       <!-- Menu Item -->
       <li class="dt-action-nav__item">
-        <a href="javascript:void(0)"
-           class="dt-action-nav__link"
-           [ngClass]="{'active':activeMenu == 'notifications'}"
-           (click)="onClickMenu($event, 'notifications')">
+        <a href="javascript:void(0)" class="dt-action-nav__link" [ngClass]="{'active':activeMenu == 'notifications'}"
+          (click)="onClickMenu($event, 'notifications')">
           <gx-icon name="notification2" size="1x"></gx-icon>
         </a>
       </li>
@@ -42,10 +36,8 @@
 
       <!-- Menu Item -->
       <li class="dt-action-nav__item">
-        <a href="javascript:void(0)"
-           class="dt-action-nav__link"
-           [ngClass]="{'active':activeMenu == 'messages'}"
-           (click)="onClickMenu($event, 'messages')">
+        <a href="javascript:void(0)" class="dt-action-nav__link" [ngClass]="{'active':activeMenu == 'messages'}"
+          (click)="onClickMenu($event, 'messages')">
           <gx-icon name="message" size="1x"></gx-icon>
         </a>
       </li>
@@ -106,9 +98,9 @@
             <gx-avatar [user]="currentUser"></gx-avatar>
 
             <span class="dt-avatar-info">
-                  <span class="dt-avatar-name">{{currentUser.name}}</span>
-                  <span class="f-12">{{currentUser.position}}</span>
-                </span>
+              <span class="dt-avatar-name">{{currentUser.name}}</span>
+              <span class="f-12">{{currentUser.position}}</span>
+            </span>
           </div>
           <a class="dropdown-item" href="javascript:void(0)">
             <gx-icon name="user" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
@@ -142,11 +134,11 @@
 
         <!-- Brand logo -->
         <span class="dt-brand__logo">
-            <a class="dt-brand__logo-link" routerLink="/">
-              <img class="dt-brand__logo-img" src="https://via.placeholder.com/360x108" alt="Drift">
-              <img class="dt-brand__logo-symbol" src="https://via.placeholder.com/133x119" alt="Drift">
-            </a>
-          </span>
+          <a class="dt-brand__logo-link" routerLink="/">
+            <img class="dt-brand__logo-img" src="https://via.placeholder.com/360x108" alt="Drift">
+            <img class="dt-brand__logo-symbol" src="https://via.placeholder.com/133x119" alt="Drift">
+          </a>
+        </span>
         <!-- /brand logo -->
 
       </div>
@@ -154,9 +146,7 @@
     </div>
     <!-- /sidebar header -->
 
-    <div class="dt-sidebar__container"
-         [perfectScrollbar]="{wheelPropagation: !settings.navigationFixed}"
-         [disabled]="!settings.customScrollbars">
+    <div class="dt-sidebar__container">
       <app-navigation class="dt-side-nav" layout="vertical"></app-navigation>
     </div>
   </div>

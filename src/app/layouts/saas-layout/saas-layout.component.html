@@ -9,15 +9,10 @@
   <div class="dt-container">
 
     <!-- NAVBAR: Left -->
-    <app-navbar-vertical
-      perfectScrollbar
-      [disabled]="!settings.customScrollbars"
-      class="d-md-none">
+    <app-navbar-vertical class="d-md-none">
     </app-navbar-vertical>
 
-    <div
-      *ngIf="settings.activeNavDrawer"
-      class="dt-backdrop" (click)="onClickOverlay()"></div>
+    <div *ngIf="settings.activeNavDrawer" class="dt-backdrop" (click)="onClickOverlay()"></div>
     <!-- / NAVBAR: Left -->
 
     <!-- Site Content -->
