@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {NgProgressModule} from 'ngx-progressbar';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ToastNoAnimationModule, ToastrModule} from 'ngx-toastr';
@@ -23,35 +23,29 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    ToastNoAnimationModule,
-    ToastrModule.forRoot(),
-    AppRoutingModule,
-    SharedModule,
-    NgProgressModule,
-    NgbModule
-  ],
-  providers: [
-    SettingsService,
-    NavigationService,
-    AuthService,
-    AppService
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        ToastNoAnimationModule,
+        ToastrModule.forRoot(),
+        AppRoutingModule,
+        SharedModule,
+        NgProgressModule,
+        NgbModule], providers: [
+        SettingsService,
+        NavigationService,
+        AuthService,
+        AppService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {
 }
