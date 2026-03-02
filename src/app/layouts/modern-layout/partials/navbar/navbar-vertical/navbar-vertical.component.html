@@ -44,11 +44,13 @@
       <!-- /menu item -->
 
       <!-- Menu Item -->
-      <li class="dt-action-nav__item" *ngIf="settings.navigationStyle === 'folded'">
-        <a href="javascript:void(0)" class="dt-action-nav__link" (click)="onToggleNavigation($event)">
-          <gx-icon name="vertical-more" size="2x"></gx-icon>
-        </a>
-      </li>
+      @if (settings.navigationStyle === 'folded') {
+        <li class="dt-action-nav__item">
+          <a href="javascript:void(0)" class="dt-action-nav__link" (click)="onToggleNavigation($event)">
+            <gx-icon name="vertical-more" size="2x"></gx-icon>
+          </a>
+        </li>
+      }
       <!-- /menu item -->
 
     </ul>
@@ -69,10 +71,10 @@
         <div ngbDropdownMenu>
           <a class="dropdown-item" href="javascript:void(0)">
             <gx-icon name="editors" [fw]="true"></gx-icon>
-            Edit </a>
+          Edit </a>
           <a class="dropdown-item" href="javascript:void(0)">
             <gx-icon name="trash" [fw]="true"></gx-icon>
-            Delete </a>
+          Delete </a>
           <a class="dropdown-item" href="javascript:void(0)">
             <gx-icon name="heart-o" [fw]="true"></gx-icon>
             Favourite List
@@ -108,7 +110,7 @@
           </a>
           <a class="dropdown-item" href="javascript:void(0)">
             <gx-icon name="settings" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
-            Setting </a>
+          Setting </a>
           <a class="dropdown-item" href="#logout" (click)="onLogout($event)">
             <gx-icon name="editors" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
             Logout

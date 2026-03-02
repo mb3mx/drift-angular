@@ -1,7 +1,7 @@
-import {Component, HostBinding, Inject, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, HostBinding, Inject, OnDestroy, OnInit, ViewEncapsulation, DOCUMENT} from '@angular/core';
 import {SettingsService} from '@app/settings/settings.service';
 import {Subscription} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
+
 import {LayoutConfig} from './layout.config';
 
 @Component({

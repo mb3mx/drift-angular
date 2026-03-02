@@ -103,11 +103,13 @@
 
           <!-- Dropdown Option -->
           <div ngbDropdownMenu>
-            <a href="javascript:void(0)" *ngFor="let lang of languages" (click)="switchLanguage(lang)"
-              class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
-              <i class="flag-icon mr-2" [ngClass]="lang.flag"></i>
-              <span>{{lang.title}}</span>
-            </a>
+            @for (lang of languages; track lang) {
+              <a href="javascript:void(0)" (click)="switchLanguage(lang)"
+                class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
+                <i class="flag-icon mr-2" [ngClass]="lang.flag"></i>
+                <span>{{lang.title}}</span>
+              </a>
+            }
           </div>
           <!-- /dropdown option -->
 

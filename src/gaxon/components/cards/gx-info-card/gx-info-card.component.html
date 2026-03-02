@@ -5,8 +5,10 @@
   <card-heading class="text-center">
     <div class="dt-separator-h-v1 mb-2" [ngClass]="data.handleColor"></div>
     <h3 class="{{data.titleStyle}}"
-        [ngClass]="{'mb-1':style === 'basic', 'mb-0':style === 'panel' || style === 'classic'}">{{data.title}}</h3>
-    <span *ngIf="data.content && style == 'basic'" class="d-inline-block text-primary">{{data.content}}</span>
+    [ngClass]="{'mb-1':style === 'basic', 'mb-0':style === 'panel' || style === 'classic'}">{{data.title}}</h3>
+    @if (data.content && style == 'basic') {
+      <span class="d-inline-block text-primary">{{data.content}}</span>
+    }
   </card-heading>
   <!-- /card heading -->
 
@@ -15,44 +17,58 @@
 
 <card-body [ngClass]="bodyClasses">
 
-  <p class="mb-5" *ngIf="data.content && style == 'classic'">{{data.content}}</p>
+  @if (data.content && style == 'classic') {
+    <p class="mb-5">{{data.content}}</p>
+  }
 
   <!-- Avatar -->
-  <img *ngIf="data.image && style === 'basic'"
-       class="img-fluid mb-7"
-       [src]="data.image"
-       alt="{{data.title}}">
+  @if (data.image && style === 'basic') {
+    <img
+      class="img-fluid mb-7"
+      [src]="data.image"
+      alt="{{data.title}}">
+  }
 
-  <div class="mx-n8 mb-n8" *ngIf="data.image && style === 'panel'">
-    <img class="w-100" [src]="data.image" alt="{{data.title}}">
-  </div>
+  @if (data.image && style === 'panel') {
+    <div class="mx-n8 mb-n8">
+      <img class="w-100" [src]="data.image" alt="{{data.title}}">
+    </div>
+  }
   <!-- /avatar -->
 
   <!-- Button -->
 
   <div>
-    <a *ngIf="data.actionLabel && style === 'basic'"
-       class="btn text-uppercase btn-sm"
-       [ngClass]="data.actionStyles"
-       [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+    @if (data.actionLabel && style === 'basic') {
+      <a
+        class="btn text-uppercase btn-sm"
+        [ngClass]="data.actionStyles"
+      [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+    }
   </div>
 
-  <a *ngIf="data.actionLabel && style === 'classic'"
-     class="text-uppercase f-12 font-weight-500"
-     [ngClass]="data.actionStyles"
-     [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+  @if (data.actionLabel && style === 'classic') {
+    <a
+      class="text-uppercase f-12 font-weight-500"
+      [ngClass]="data.actionStyles"
+    [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+  }
 
   <!-- /button -->
 
 </card-body>
 
 <!-- Card Image -->
-<img *ngIf="data.image && style === 'classic'" class="img-fluid mb-n15" [src]="data.image" alt="{{data.title}}">
+@if (data.image && style === 'classic') {
+  <img class="img-fluid mb-n15" [src]="data.image" alt="{{data.title}}">
+}
 <!-- /card Image -->
 
 <!-- Button -->
-<a *ngIf="data.actionLabel && style === 'panel'"
-   class="btn btn-block rounded-0 text-uppercase"
-   [ngClass]="data.actionStyles"
-   [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+@if (data.actionLabel && style === 'panel') {
+  <a
+    class="btn btn-block rounded-0 text-uppercase"
+    [ngClass]="data.actionStyles"
+  [routerLink]="data.actionRoute">{{data.actionLabel}}</a>
+}
 <!-- /button -->

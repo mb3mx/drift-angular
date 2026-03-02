@@ -12,15 +12,19 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "es2022",
     "module": "es2022",
     "useDefineForClassFields": false,
     "resolveJsonModule": true,
     "paths": {
-      "@gaxon/*": ["src/gaxon/*"],
-      "@app/*": ["src/app/*"]
+      "@gaxon/*": [
+        "src/gaxon/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ]
     },
     "typeRoots": [
       "node_modules/@types"

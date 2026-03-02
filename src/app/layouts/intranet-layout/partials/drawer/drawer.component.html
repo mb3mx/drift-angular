@@ -76,4 +76,6 @@
 </div>
 <!-- /module drawer inner -->
 
-<div class="dt-backdrop" *ngIf="drawer.isOpen" (click)="closeDrawer($event)"></div>
+@if (drawer.isOpen) {
+  <div class="dt-backdrop" (click)="closeDrawer($event)"></div>
+}

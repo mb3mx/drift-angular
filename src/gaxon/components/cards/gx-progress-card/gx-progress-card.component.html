@@ -2,18 +2,24 @@
 <card-body class=" p-5">
   <div class="d-flex mb-5">
 
-    <span *ngIf="data.heading"
+    @if (data.heading) {
+      <span
         class="d-block font-weight-500 f-16"
-        [ngClass]="data.heading.color">{{data.heading.value}}</span>
+      [ngClass]="data.heading.color">{{data.heading.value}}</span>
+    }
 
-    <div *ngIf="data.trending.value && data.trending.icon"
-         class="d-flex align-items-center ml-auto" [ngClass]="data.trending.color">
-
-      <span *ngIf="data.trending.value" class="mb-0 font-weight-500 mr-1">{{data.trending.value}}</span>
-
-      <gx-icon *ngIf="data.trending.icon"
-               [name]="data.trending.icon"></gx-icon>
-    </div>
+    @if (data.trending.value && data.trending.icon) {
+      <div
+        class="d-flex align-items-center ml-auto" [ngClass]="data.trending.color">
+        @if (data.trending.value) {
+          <span class="mb-0 font-weight-500 mr-1">{{data.trending.value}}</span>
+        }
+        @if (data.trending.icon) {
+          <gx-icon
+          [name]="data.trending.icon"></gx-icon>
+        }
+      </div>
+    }
   </div>
   <!-- Grid -->
 
@@ -22,7 +28,9 @@
     <!-- Grid Item -->
     <div class="col-xl-{{coloums[0]}} col-sm-{{coloums[0]}} col-md-12 pr-2">
       <span class="text-dark display-3 font-weight-500 mr-1">{{data.amount}}</span>
-      <p *ngIf="data.tagLine" class="mb-0" [ngClass]="data.tagLine.color">{{data.tagLine.text}}</p>
+      @if (data.tagLine) {
+        <p class="mb-0" [ngClass]="data.tagLine.color">{{data.tagLine.text}}</p>
+      }
     </div>
     <!-- /grid item -->
 
@@ -30,7 +38,9 @@
     <div class="col-xl-{{coloums[1]}} col-sm-{{coloums[1]}} col-md-12">
 
       <!-- Chart -->
-      <ng-content *ngIf="chart" select="gx-chart"></ng-content>
+      @if (chart) {
+        <ng-content select="gx-chart"></ng-content>
+      }
       <!-- /chart -->
 
     </div>

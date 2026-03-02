@@ -1,6 +1,6 @@
-import {Component, ElementRef, HostListener, Inject, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, HostListener, Inject, OnDestroy, OnInit, ViewEncapsulation, DOCUMENT} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
+
 import {SettingsService} from '@app/settings/settings.service';
 import {DrawerService} from '../../../drawer.service';
 

@@ -1,8 +1,8 @@
-import {Component, HostBinding, HostListener, Inject, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, HostBinding, HostListener, Inject, OnDestroy, OnInit, ViewEncapsulation, DOCUMENT} from '@angular/core';
 import {SettingsService} from '@app/settings/settings.service';
 import {NavigationService} from '@gaxon/components';
 import {Subscription} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
+
 import {LayoutConfig} from './layout.config';
 
 import {NavigationModel} from './navigation/navigation.model';

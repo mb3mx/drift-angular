@@ -6,23 +6,23 @@
 
     <!-- Dropdown -->
     <span class="ms-3 d-inline-block" ngbDropdown placement="bottom-right">
-        <a class="no-arrow" href="javascript:void(0)" ngbDropdownToggle>
-          <gx-icon name="settings" size="lg" class="text-light-gray"></gx-icon>
-        </a>
+      <a class="no-arrow" href="javascript:void(0)" ngbDropdownToggle>
+        <gx-icon name="settings" size="lg" class="text-light-gray"></gx-icon>
+      </a>
 
-        <span ngbDropdownMenu>
-            <a class="dropdown-item" href="javascript:void(0)">
-                <gx-icon name="editors" [fw]="true"></gx-icon>
-                Edit
-            </a>
-            <a class="dropdown-item" href="javascript:void(0)">
-              <gx-icon name="contacts" [fw]="true"></gx-icon>
-                Contact List</a>
-            <a class="dropdown-item" href="javascript:void(0)">
-              <gx-icon name="heart" [fw]="true"></gx-icon>
-                Favourite List
-            </a>
-        </span>
+      <span ngbDropdownMenu>
+        <a class="dropdown-item" href="javascript:void(0)">
+          <gx-icon name="editors" [fw]="true"></gx-icon>
+          Edit
+        </a>
+        <a class="dropdown-item" href="javascript:void(0)">
+          <gx-icon name="contacts" [fw]="true"></gx-icon>
+        Contact List</a>
+        <a class="dropdown-item" href="javascript:void(0)">
+          <gx-icon name="heart" [fw]="true"></gx-icon>
+          Favourite List
+        </a>
+      </span>
     </span>
     <!-- /dropdown -->
 
@@ -30,24 +30,25 @@
 </div>
 
 <!-- Media -->
-<a href="javascript:void(0)" class="media" *ngFor="let notification of notifications">
-
-  <!-- Avatar -->
-  <gx-avatar [user]="notification" [charLength]="0" class="me-3"></gx-avatar>
-  <!-- avatar -->
-
-  <!-- Media Body -->
-  <span class="media-body">
-        <span class="message" [innerHTML]="notification.message"></span>
-        <span class="meta-date">
-          <gx-icon *ngIf="notification.icon.name"
-                   [name]="notification.icon.name"
-                   [ngClass]="notification.icon.color"
-                   [fw]="true" class="mr-1"></gx-icon>
-          {{notification.time}}
-        </span>
+@for (notification of notifications; track notification) {
+  <a href="javascript:void(0)" class="media">
+    <!-- Avatar -->
+    <gx-avatar [user]="notification" [charLength]="0" class="me-3"></gx-avatar>
+    <!-- avatar -->
+    <!-- Media Body -->
+    <span class="media-body">
+      <span class="message" [innerHTML]="notification.message"></span>
+      <span class="meta-date">
+        @if (notification.icon.name) {
+          <gx-icon
+            [name]="notification.icon.name"
+            [ngClass]="notification.icon.color"
+          [fw]="true" class="mr-1"></gx-icon>
+        }
+        {{notification.time}}
       </span>
-  <!-- /media body -->
-
-</a>
+    </span>
+    <!-- /media body -->
+  </a>
+}
 <!-- /media -->

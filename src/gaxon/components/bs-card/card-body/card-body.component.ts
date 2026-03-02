@@ -4,12 +4,18 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2} from '@a
     selector: 'bs-card-body',
     template: `
     <ng-container>
-      <h3 *ngIf="cardTitle" class="card-title" [innerHTML]="cardTitle"></h3>
-      <h5 *ngIf="cardSubTitle" class="card-subtitle mb-2 text-muted" [innerHTML]="cardSubTitle"></h5>
-      <p *ngIf="cardText" class="card-text" [innerHTML]="cardText"></p>
+      @if (cardTitle) {
+        <h3 class="card-title" [innerHTML]="cardTitle"></h3>
+      }
+      @if (cardSubTitle) {
+        <h5 class="card-subtitle mb-2 text-muted" [innerHTML]="cardSubTitle"></h5>
+      }
+      @if (cardText) {
+        <p class="card-text" [innerHTML]="cardText"></p>
+      }
       <ng-content></ng-content>
     </ng-container>
-  `,
+    `,
     styles: [':host{display: block;}'],
     standalone: false
 })

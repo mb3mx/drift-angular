@@ -1,25 +1,27 @@
-  <!-- Overlay Content -->
-  <div class="bg-overlay__inner">
-    <!-- Card Body -->
-    <bs-card-body>
-      <!-- Grid -->
-      <div class="row">
-        <!-- Grid Item -->
-        <div class="col-xl-6 offset-sm-6">
-          <span class="d-block mb-2" *ngIf="data.category">{{data.category}}</span>
-          <p class="card-text display-4 font-weight-600">
-            {{data.title}}
-          </p>
-          <p class="card-text" [ngClass]="textStyle" [innerHTML]="data.content"></p>
-          <button class="btn btn-default btn-sm text-dark">Read More</button>
-        </div>
-        <!-- /grid item -->
+<!-- Overlay Content -->
+<div class="bg-overlay__inner">
+  <!-- Card Body -->
+  <bs-card-body>
+    <!-- Grid -->
+    <div class="row">
+      <!-- Grid Item -->
+      <div class="col-xl-6 offset-sm-6">
+        @if (data.category) {
+          <span class="d-block mb-2">{{data.category}}</span>
+        }
+        <p class="card-text display-4 font-weight-600">
+          {{data.title}}
+        </p>
+        <p class="card-text" [ngClass]="textStyle" [innerHTML]="data.content"></p>
+        <button class="btn btn-default btn-sm text-dark">Read More</button>
       </div>
-      <!-- /grid -->
-    </bs-card-body>
-    <!-- /card body -->
-  </div>
-  <!-- /overlay content -->
+      <!-- /grid item -->
+    </div>
+    <!-- /grid -->
+  </bs-card-body>
+  <!-- /card body -->
+</div>
+<!-- /overlay content -->
 
 
 <!--&lt;!&ndash; Card Image &ndash;&gt;-->

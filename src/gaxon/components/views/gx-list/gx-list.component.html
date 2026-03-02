@@ -1,9 +1,13 @@
 <!-- header -->
-<ng-content *ngIf="listHeader" select="gx-list-header"></ng-content>
+@if (listHeader) {
+  <ng-content select="gx-list-header"></ng-content>
+}
 <!-- /header -->
 
 <!-- header -->
-<ng-content *ngIf="slider" select="gx-slider"></ng-content>
+@if (slider) {
+  <ng-content select="gx-slider"></ng-content>
+}
 <!-- /header -->
 
 <!-- Card Stacked -->
@@ -16,9 +20,11 @@
   <!-- /Card Body -->
 
   <!-- Card Footer -->
-  <bs-card-footer *ngIf="listFooter" [ngClass]="footerClass">
-    <ng-content select="gx-list-footer"></ng-content>
-  </bs-card-footer>
+  @if (listFooter) {
+    <bs-card-footer [ngClass]="footerClass">
+      <ng-content select="gx-list-footer"></ng-content>
+    </bs-card-footer>
+  }
   <!-- /Card Footer -->
 
 </div>

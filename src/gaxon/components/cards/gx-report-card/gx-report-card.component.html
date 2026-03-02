@@ -20,11 +20,11 @@
 
       <!-- Chart -->
       <gx-chart chartClasses="mx-auto mb-5 mb-sm-0 mb-md-5 mb-xl-0"
-                [chartType]="chart.chartType"
-                [options]="chart.options"
-                [labels]="chart.labels"
-                [colors]="chart.colors"
-                [datasets]="chart.datasets"></gx-chart>
+        [chartType]="chart.chartType"
+        [options]="chart.options"
+        [labels]="chart.labels"
+        [colors]="chart.colors"
+      [datasets]="chart.datasets"></gx-chart>
       <!-- /chart -->
 
     </div>
@@ -35,22 +35,24 @@
 
       <div class="pb-3 mb-3 border-bottom">
         <span class="display-4 d-inline-block mr-2 font-weight-500 text-dark">{{data.value}}</span><span
-        class="font-weight-light f-16">{{data.content}}</span>
-      </div>
+      class="font-weight-light f-16">{{data.content}}</span>
+    </div>
 
-      <!-- List -->
-      <ul class="dt-list dt-list-col-6">
-        <li class="dt-list__item" *ngFor="let item of data.items">
+    <!-- List -->
+    <ul class="dt-list dt-list-col-6">
+      @for (item of data.items; track item) {
+        <li class="dt-list__item">
           <span class="dot-shape dot-shape-lg me-3" [ngClass]="item.dotColor"></span>
           <span class="d-inline-block">{{item.title}}</span>
         </li>
-      </ul>
-      <!-- /list -->
-
-    </div>
-    <!-- /grid item -->
+      }
+    </ul>
+    <!-- /list -->
 
   </div>
-  <!-- /grid -->
+  <!-- /grid item -->
+
+</div>
+<!-- /grid -->
 
 </card-body>

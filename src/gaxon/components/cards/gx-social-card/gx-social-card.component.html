@@ -1,7 +1,9 @@
 <!-- Social Circle -->
-<div *ngIf="logoIcon" class="dt-social__circle" [ngClass]="circleColor">
-  <gx-icon [name]="logoIcon" [fw]="true" size="3x" [ngClass]="iconColor"></gx-icon>
-</div>
+@if (logoIcon) {
+  <div class="dt-social__circle" [ngClass]="circleColor">
+    <gx-icon [name]="logoIcon" [fw]="true" size="3x" [ngClass]="iconColor"></gx-icon>
+  </div>
+}
 <!-- /social circle -->
 
 <!-- Card Body -->
@@ -10,21 +12,27 @@
   <!-- List -->
   <ul class="dt-list dt-list-bordered dt-list-cm-0 flex-nowrap">
     <!-- List Item -->
-    <li class="dt-list__item text-truncate" *ngIf="likes">
-      <span><span class="text-dark">{{likes}} </span>Likes</span>
-    </li>
+    @if (likes) {
+      <li class="dt-list__item text-truncate">
+        <span><span class="text-dark">{{likes}} </span>Likes</span>
+      </li>
+    }
     <!-- /list item -->
 
     <!-- List Item -->
-    <li class="dt-list__item text-truncate" *ngIf="friends">
-      <span><span class="text-dark">{{friends}} </span>Friends</span>
-    </li>
+    @if (friends) {
+      <li class="dt-list__item text-truncate">
+        <span><span class="text-dark">{{friends}} </span>Friends</span>
+      </li>
+    }
     <!-- /list item -->
 
     <!-- List Item -->
-    <li class="dt-list__item text-truncate" *ngIf="followers">
-      <span><span class="text-dark">{{followers}} </span>Followers</span>
-    </li>
+    @if (followers) {
+      <li class="dt-list__item text-truncate">
+        <span><span class="text-dark">{{followers}} </span>Followers</span>
+      </li>
+    }
     <!-- /list item -->
   </ul>
   <!-- /list -->

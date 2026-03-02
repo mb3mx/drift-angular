@@ -1,8 +1,10 @@
 <card-body class="d-flex flex-sm-column">
   <!-- Icon -->
-  <div class="mb-sm-7 mr-7 mr-sm-0" *ngIf="icon">
-    <gx-icon [name]="icon.name" class="dt-icon-bg" [ngClass]="icon.colorClasses"></gx-icon>
-  </div>
+  @if (icon) {
+    <div class="mb-sm-7 mr-7 mr-sm-0">
+      <gx-icon [name]="icon.name" class="dt-icon-bg" [ngClass]="icon.colorClasses"></gx-icon>
+    </div>
+  }
   <!-- /icon -->
 
   <div class="flex-1">

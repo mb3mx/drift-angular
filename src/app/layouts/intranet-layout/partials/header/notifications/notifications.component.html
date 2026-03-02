@@ -14,24 +14,25 @@
 
   <div class="h-auto">
     <!-- Media -->
-    <a href="javascript:void(0)" class="media" *ngFor="let notification of notifications">
-
-      <!-- Avatar -->
-      <gx-avatar [user]="notification" [charLength]="0" class="me-3"></gx-avatar>
-      <!-- avatar -->
-
-      <!-- Media Body -->
-      <span class="media-body">
-        <span class="message" [innerHTML]="notification.message"></span>
-        <span class="meta-date">
-          <gx-icon *ngIf="notification.icon.name" [name]="notification.icon.name" [ngClass]="notification.icon.color"
-            [fw]="true" class="mr-1"></gx-icon>
-          {{notification.time}}
+    @for (notification of notifications; track notification) {
+      <a href="javascript:void(0)" class="media">
+        <!-- Avatar -->
+        <gx-avatar [user]="notification" [charLength]="0" class="me-3"></gx-avatar>
+        <!-- avatar -->
+        <!-- Media Body -->
+        <span class="media-body">
+          <span class="message" [innerHTML]="notification.message"></span>
+          <span class="meta-date">
+            @if (notification.icon.name) {
+              <gx-icon [name]="notification.icon.name" [ngClass]="notification.icon.color"
+              [fw]="true" class="mr-1"></gx-icon>
+            }
+            {{notification.time}}
+          </span>
         </span>
-      </span>
-      <!-- /media body -->
-
-    </a>
+        <!-- /media body -->
+      </a>
+    }
     <!-- /media -->
   </div>
 </div>

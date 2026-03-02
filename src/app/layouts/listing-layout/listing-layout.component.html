@@ -11,7 +11,9 @@
     <!-- NAVBAR -->
     <app-navbar-vertical class="d-lg-none"></app-navbar-vertical>
 
-    <div *ngIf="settings.activeNavDrawer" class="dt-backdrop" (click)="onClickOverlay()"></div>
+    @if (settings.activeNavDrawer) {
+      <div class="dt-backdrop" (click)="onClickOverlay()"></div>
+    }
     <!-- / NAVBAR -->
 
     <!-- Site Content -->

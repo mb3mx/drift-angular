@@ -32,10 +32,10 @@
     <card-body class="pt-0 d-flex justify-content-center align-items-center">
       <!-- Chart -->
       <gx-chart [chartType]="chart.chartType"
-                [options]="chart.options"
-                [labels]="chart.labels"
-                [colors]="chart.colors"
-                [datasets]="chart.datasets"></gx-chart>
+        [options]="chart.options"
+        [labels]="chart.labels"
+        [colors]="chart.colors"
+      [datasets]="chart.datasets"></gx-chart>
       <!-- /chart -->
     </card-body>
     <!-- /card body -->
@@ -48,18 +48,19 @@
     <!-- Card Body -->
     <card-body class="pt-0">
       <ul class="dt-indicator">
-        <li class="dt-indicator-item" *ngFor="let item of progressRecords">
-          <p class="dt-indicator-title">{{item.label}}</p>
-
-          <gx-status-bar showPercent
-                         barPosition="start"
-                         [fullWidth]="true"
-                         [fillVal]="item.value"
-                         [maxVal]="item.maxValue"
-                         [barColor]="item.color"
-                         textColor="">
-          </gx-status-bar>
-        </li>
+        @for (item of progressRecords; track item) {
+          <li class="dt-indicator-item">
+            <p class="dt-indicator-title">{{item.label}}</p>
+            <gx-status-bar showPercent
+              barPosition="start"
+              [fullWidth]="true"
+              [fillVal]="item.value"
+              [maxVal]="item.maxValue"
+              [barColor]="item.color"
+              textColor="">
+            </gx-status-bar>
+          </li>
+        }
       </ul>
     </card-body>
     <!-- /card body -->

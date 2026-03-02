@@ -12,11 +12,13 @@
         <div class="text-center text-sm-left mb-8 mb-sm-0">
           <p class="display-5 font-weight-500">{{cardData.heading}}</p>
           <span class="d-block mb-3">{{cardData.subHeading}}</span>
-          <div *ngFor="let item of cardData.apps; index as i" [ngClass]="{'mb-2': i === 0}">
-            <a href="javascript:void(0)" class="d-inline-block">
-              <img [src]="item.thumb" alt="{{item.title}}" class="img-fluid">
-            </a>
-          </div>
+          @for (item of cardData.apps; track item; let i = $index) {
+            <div [ngClass]="{'mb-2': i === 0}">
+              <a href="javascript:void(0)" class="d-inline-block">
+                <img [src]="item.thumb" alt="{{item.title}}" class="img-fluid">
+              </a>
+            </div>
+          }
         </div>
       </div>
       <!-- /grid item -->

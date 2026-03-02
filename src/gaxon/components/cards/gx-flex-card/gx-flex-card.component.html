@@ -1,8 +1,14 @@
 <!-- Card Stacked -->
 <bs-card-body class="p-3">
-  <span *ngIf="data.badge" class="badge badge-success mb-1 p-1">{{data.badge}}</span>
-  <h4 *ngIf="data.title" class="mb-1 text-truncate">{{data.title}}</h4>
-  <span *ngIf="data.subtitle" class="d-block f-12 text-truncate">{{data.subtitle}}</span>
+  @if (data.badge) {
+    <span class="badge badge-success mb-1 p-1">{{data.badge}}</span>
+  }
+  @if (data.title) {
+    <h4 class="mb-1 text-truncate">{{data.title}}</h4>
+  }
+  @if (data.subtitle) {
+    <span class="d-block f-12 text-truncate">{{data.subtitle}}</span>
+  }
 </bs-card-body>
 
 <!-- Card Image -->

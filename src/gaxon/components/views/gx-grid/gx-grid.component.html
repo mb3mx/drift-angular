@@ -9,7 +9,9 @@
 <!-- /Card Body -->
 
 <!-- Card Footer -->
-<bs-card-footer *ngIf="gridFooter">
-  <ng-content select="gx-grid-footer"></ng-content>
-</bs-card-footer>
+@if (gridFooter) {
+  <bs-card-footer>
+    <ng-content select="gx-grid-footer"></ng-content>
+  </bs-card-footer>
+}
 <!-- /Card Footer -->

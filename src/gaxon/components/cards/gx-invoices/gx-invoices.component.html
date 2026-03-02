@@ -23,7 +23,7 @@
         <a class="dropdown-item" href="javascript:void(0)">Action</a>
         <a class="dropdown-item" href="javascript:void(0)">Another action</a>
         <a class="dropdown-item" href="javascript:void(0)">Something else
-          here</a>
+        here</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
       </div>
@@ -42,35 +42,37 @@
   <div class="table-responsive">
     <table class="table mb-0 table-fluid">
       <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Invoice To</th>
-        <th scope="col" class="text-right">Date</th>
-        <th scope="col" class="text-right">Amount</th>
-        <th scope="col">Action</th>
-      </tr>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Invoice To</th>
+          <th scope="col" class="text-right">Date</th>
+          <th scope="col" class="text-right">Amount</th>
+          <th scope="col">Action</th>
+        </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let invoice of invoices">
-        <td>{{invoice.invoiceNo}}</td>
-        <td class="text-dark">{{invoice.invoiceTo}}</td>
-        <td class="text-right">{{invoice.invoiceDate}}</td>
-        <td class="text-right">{{invoice.amount | currency}}</td>
-        <td>
-          <ul class="dt-list dt-list-cm-0">
-            <li class="dt-list__item">
-              <a class="text-light-gray" href="javascript:void(0)">
-                <gx-icon name="editors"></gx-icon>
-              </a>
-            </li>
-            <li class="dt-list__item">
-              <a class="text-light-gray" href="javascript:void(0)">
-                <gx-icon name="trash-filled"></gx-icon>
-              </a>
-            </li>
-          </ul>
-        </td>
-      </tr>
+        @for (invoice of invoices; track invoice) {
+          <tr>
+            <td>{{invoice.invoiceNo}}</td>
+            <td class="text-dark">{{invoice.invoiceTo}}</td>
+            <td class="text-right">{{invoice.invoiceDate}}</td>
+            <td class="text-right">{{invoice.amount | currency}}</td>
+            <td>
+              <ul class="dt-list dt-list-cm-0">
+                <li class="dt-list__item">
+                  <a class="text-light-gray" href="javascript:void(0)">
+                    <gx-icon name="editors"></gx-icon>
+                  </a>
+                </li>
+                <li class="dt-list__item">
+                  <a class="text-light-gray" href="javascript:void(0)">
+                    <gx-icon name="trash-filled"></gx-icon>
+                  </a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   </div>

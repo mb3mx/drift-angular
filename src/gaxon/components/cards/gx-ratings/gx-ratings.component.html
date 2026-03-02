@@ -19,17 +19,18 @@
   <!-- List -->
   <ul class="dt-list flex-column">
     <!-- List Item -->
-    <li class="dt-list__item" *ngFor="let review of reviews">
-      <div class="rating-container">
-        <div class="ratings">
-          <span class="rated" [ngStyle]="{width:getPercentageWidth(review)}"></span>
+    @for (review of reviews; track review) {
+      <li class="dt-list__item">
+        <div class="rating-container">
+          <div class="ratings">
+            <span class="rated" [ngStyle]="{width:getPercentageWidth(review)}"></span>
+          </div>
+          <div class="ratings-review">
+            <span class="count-number">{{review.totalReview}}</span> Reviews
+          </div>
         </div>
-
-        <div class="ratings-review">
-          <span class="count-number">{{review.totalReview}}</span> Reviews
-        </div>
-      </div>
-    </li>
+      </li>
+    }
     <!-- /list item -->
   </ul>
   <!-- /list -->

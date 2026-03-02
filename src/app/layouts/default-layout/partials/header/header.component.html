@@ -61,141 +61,143 @@
             <form class="search-box right-side-icon">
               <input class="form-control form-control-lg" type="search" id="address" name="address"
                 placeholder="Search in app..." (click)="$event.stopPropagation()">
-              <button type="submit" class="search-icon" (click)="$event.stopPropagation()"><gx-icon name="search"
-                  size="lg"></gx-icon></button>
-            </form>
-            <!-- /search box -->
+                <button type="submit" class="search-icon" (click)="$event.stopPropagation()"><gx-icon name="search"
+                size="lg"></gx-icon></button>
+              </form>
+              <!-- /search box -->
 
-          </div>
-          <!-- /dropdown option -->
-
-        </li>
-      </ul>
-      <!-- /header menu -->
-
-      <!-- Header Menu -->
-      <ul class="dt-nav">
-        <li class="dt-nav__item dt-notification-app" ngbDropdown [placement]="['bottom']">
-
-          <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
-            <gx-icon name="apps" fw="true" size="sm"></gx-icon>
-            <span>Apps</span>
-          </a>
-          <!-- /dropdown link -->
-
-          <!-- Dropdown Option -->
-          <my-apps ngbDropdownMenu></my-apps>
-          <!-- /dropdown option -->
-
-        </li>
-      </ul>
-      <!-- /header menu -->
-
-      <!-- Header Menu -->
-      <ul class="dt-nav">
-        <li class="dt-nav__item dt-notification" ngbDropdown [placement]="['bottom-right', 'bottom']">
-
-          <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
-            <gx-icon name="notification2" size="xl" fw="true" class="dt-icon-alert"></gx-icon>
-          </a>
-          <!-- /dropdown link -->
-
-          <!-- Dropdown Option -->
-          <my-notifications ngbDropdownMenu class="dropdown-menu-media"></my-notifications>
-          <!-- /dropdown option -->
-
-        </li>
-
-        <li class="dt-nav__item dt-notification" ngbDropdown [placement]="['bottom-right', 'bottom']">
-
-          <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
-            <gx-icon name="open-mail" size="xl" fw="true"></gx-icon>
-          </a>
-          <!-- /dropdown link -->
-
-          <!-- Dropdown Option -->
-          <my-messages ngbDropdownMenu class="dropdown-menu-media"></my-messages>
-          <!-- /dropdown option -->
-
-        </li>
-      </ul>
-      <!-- /header menu -->
-
-      <!-- Header Menu -->
-      <ul class="dt-nav">
-        <li class="dt-nav__item" ngbDropdown>
-
-          <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link" ngbDropdownToggle>
-            <i class="flag-icon flag-icon-rounded flag-icon-lg" [ngClass]="currentLanguage.flag"></i>
-            <span class="text-uppercase">{{currentLanguage.id}}</span>
-          </a>
-          <!-- /dropdown link -->
-
-          <!-- Dropdown Option -->
-          <div ngbDropdownMenu>
-            <a href="javascript:void(0)" *ngFor="let lang of languages" (click)="switchLanguage(lang)"
-              class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
-              <i class="flag-icon mr-2" [ngClass]="lang.flag"></i>
-              <span>{{lang.title}}</span>
-            </a>
-          </div>
-          <!-- /dropdown option -->
-
-        </li>
-      </ul>
-      <!-- /header menu -->
-
-      <!-- Header Menu -->
-      <ul class="dt-nav">
-        <li class="dt-nav__item" placement="bottom-right" ngbDropdown>
-
-          <!-- Dropdown Link -->
-          <a href="javascript:void(0)" class="dt-nav__link no-arrow dt-avatar-wrapper" ngbDropdownToggle>
-
-            <gx-avatar [user]="currentUser" class="size-30"></gx-avatar>
-            <span class="dt-avatar-info d-none d-sm-block">
-              <span class="dt-avatar-name">{{currentUser.name}}</span>
-            </span>
-          </a>
-          <!-- /dropdown link -->
-
-          <!-- Dropdown Option -->
-          <div ngbDropdownMenu>
-            <div class="dt-avatar-wrapper flex-nowrap p-6 mt-n2 bg-gradient-purple text-white rounded-top">
-              <gx-avatar [user]="currentUser"></gx-avatar>
-              <span class="dt-avatar-info">
-                <span class="dt-avatar-name">{{currentUser.name}}</span>
-                <span class="f-12">{{currentUser.position}}</span>
-              </span>
             </div>
-            <a class="dropdown-item" href="javascript:void(0)">
-              <gx-icon name="user" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
-              Account
-            </a>
-            <a class="dropdown-item" href="javascript:void(0)">
-              <gx-icon name="settings" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
-              Setting
-            </a>
-            <a class="dropdown-item" href="#logout" (click)="onLogout($event)">
-              <gx-icon name="editors" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
-              Logout
-            </a>
-          </div>
-          <!-- /dropdown option -->
+            <!-- /dropdown option -->
 
-        </li>
-      </ul>
-      <!-- /header menu -->
+          </li>
+        </ul>
+        <!-- /header menu -->
+
+        <!-- Header Menu -->
+        <ul class="dt-nav">
+          <li class="dt-nav__item dt-notification-app" ngbDropdown [placement]="['bottom']">
+
+            <!-- Dropdown Link -->
+            <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
+              <gx-icon name="apps" fw="true" size="sm"></gx-icon>
+              <span>Apps</span>
+            </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <my-apps ngbDropdownMenu></my-apps>
+            <!-- /dropdown option -->
+
+          </li>
+        </ul>
+        <!-- /header menu -->
+
+        <!-- Header Menu -->
+        <ul class="dt-nav">
+          <li class="dt-nav__item dt-notification" ngbDropdown [placement]="['bottom-right', 'bottom']">
+
+            <!-- Dropdown Link -->
+            <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
+              <gx-icon name="notification2" size="xl" fw="true" class="dt-icon-alert"></gx-icon>
+            </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <my-notifications ngbDropdownMenu class="dropdown-menu-media"></my-notifications>
+            <!-- /dropdown option -->
+
+          </li>
+
+          <li class="dt-nav__item dt-notification" ngbDropdown [placement]="['bottom-right', 'bottom']">
+
+            <!-- Dropdown Link -->
+            <a href="javascript:void(0)" class="dt-nav__link no-arrow" ngbDropdownToggle>
+              <gx-icon name="open-mail" size="xl" fw="true"></gx-icon>
+            </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <my-messages ngbDropdownMenu class="dropdown-menu-media"></my-messages>
+            <!-- /dropdown option -->
+
+          </li>
+        </ul>
+        <!-- /header menu -->
+
+        <!-- Header Menu -->
+        <ul class="dt-nav">
+          <li class="dt-nav__item" ngbDropdown>
+
+            <!-- Dropdown Link -->
+            <a href="javascript:void(0)" class="dt-nav__link" ngbDropdownToggle>
+              <i class="flag-icon flag-icon-rounded flag-icon-lg" [ngClass]="currentLanguage.flag"></i>
+              <span class="text-uppercase">{{currentLanguage.id}}</span>
+            </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <div ngbDropdownMenu>
+              @for (lang of languages; track lang) {
+                <a href="javascript:void(0)" (click)="switchLanguage(lang)"
+                  class="dropdown-item" [ngClass]="{active:lang.id === currentLanguage.id}">
+                  <i class="flag-icon mr-2" [ngClass]="lang.flag"></i>
+                  <span>{{lang.title}}</span>
+                </a>
+              }
+            </div>
+            <!-- /dropdown option -->
+
+          </li>
+        </ul>
+        <!-- /header menu -->
+
+        <!-- Header Menu -->
+        <ul class="dt-nav">
+          <li class="dt-nav__item" placement="bottom-right" ngbDropdown>
+
+            <!-- Dropdown Link -->
+            <a href="javascript:void(0)" class="dt-nav__link no-arrow dt-avatar-wrapper" ngbDropdownToggle>
+
+              <gx-avatar [user]="currentUser" class="size-30"></gx-avatar>
+              <span class="dt-avatar-info d-none d-sm-block">
+                <span class="dt-avatar-name">{{currentUser.name}}</span>
+              </span>
+            </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <div ngbDropdownMenu>
+              <div class="dt-avatar-wrapper flex-nowrap p-6 mt-n2 bg-gradient-purple text-white rounded-top">
+                <gx-avatar [user]="currentUser"></gx-avatar>
+                <span class="dt-avatar-info">
+                  <span class="dt-avatar-name">{{currentUser.name}}</span>
+                  <span class="f-12">{{currentUser.position}}</span>
+                </span>
+              </div>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <gx-icon name="user" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
+                Account
+              </a>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <gx-icon name="settings" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
+                Setting
+              </a>
+              <a class="dropdown-item" href="#logout" (click)="onLogout($event)">
+                <gx-icon name="editors" [fw]="true" class="mr-2 mr-sm-1"></gx-icon>
+                Logout
+              </a>
+            </div>
+            <!-- /dropdown option -->
+
+          </li>
+        </ul>
+        <!-- /header menu -->
+
+      </div>
+      <!-- Header Menu Wrapper -->
 
     </div>
-    <!-- Header Menu Wrapper -->
+    <!-- /header toolbar -->
 
   </div>
-  <!-- /header toolbar -->
-
-</div>
-<!-- /header container -->
+  <!-- /header container -->

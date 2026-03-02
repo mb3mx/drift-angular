@@ -8,7 +8,9 @@
   <!-- NAVBAR -->
   <app-navbar-vertical></app-navbar-vertical>
 
-  <div *ngIf="settings.activeNavDrawer" class="dt-backdrop" (click)="onClickOverlay()"></div>
+  @if (settings.activeNavDrawer) {
+    <div class="dt-backdrop" (click)="onClickOverlay()"></div>
+  }
   <!-- / NAVBAR -->
 
   <!-- Site Content -->

@@ -19,10 +19,14 @@
 
     <!-- Grid Item -->
     <div class="col-6">
-      <div *ngIf="data.trending" class="d-flex align-items-center" [ngClass]="data.trending.color">
-        <span class="f-16 mr-1">{{data.trending.text}}</span>
-        <gx-icon *ngIf="data.trending.icon" [name]="data.trending.icon"></gx-icon>
-      </div>
+      @if (data.trending) {
+        <div class="d-flex align-items-center" [ngClass]="data.trending.color">
+          <span class="f-16 mr-1">{{data.trending.text}}</span>
+          @if (data.trending.icon) {
+            <gx-icon [name]="data.trending.icon"></gx-icon>
+          }
+        </div>
+      }
       <span class="display-4 font-weight-500" [ngClass]="amountColor">{{data.amount.value}}</span>
     </div>
     <!-- /grid item -->

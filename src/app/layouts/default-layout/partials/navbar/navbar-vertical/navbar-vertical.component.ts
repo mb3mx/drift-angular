@@ -1,9 +1,10 @@
 import {
   Component, ElementRef, HostBinding, HostListener, Inject, OnDestroy, OnInit,
-  ViewEncapsulation
+  ViewEncapsulation,
+  DOCUMENT
 } from '@angular/core';
 import {Subscription} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
+
 import {SettingsService} from '@app/settings/settings.service';
 
 @Component({
