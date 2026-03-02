@@ -25,7 +25,8 @@
             },
             "index": "src/index.html",
             "polyfills": [
-              "src/polyfills.ts"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -40,7 +41,7 @@
               "src/styles.scss",
               "src/assets/vendor/gaxon-icon/styles.css",
               "node_modules/quill/dist/quill.snow.css",
-              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.bubble.css"
             ],
             "scripts": [],
             "browser": "src/main.ts"
@@ -103,7 +104,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
