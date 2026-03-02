@@ -5,9 +5,10 @@ import {SettingsService} from '@app/settings/settings.service';
 import {AuthService} from '@app/layouts/auth-layout/auth.service';
 
 @Component({
-  selector: 'app-header-top',
-  templateUrl: './header-top.component.html',
-  styleUrls: ['./header-top.component.scss']
+    selector: 'app-header-top',
+    templateUrl: './header-top.component.html',
+    styleUrls: ['./header-top.component.scss'],
+    standalone: false
 })
 export class HeaderTopComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-header__top';

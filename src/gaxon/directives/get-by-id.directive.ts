@@ -1,8 +1,9 @@
 import {Directive, Input} from '@angular/core';
 
 @Directive({
-  selector: '[getbyid]',
-  exportAs: 'item'
+    selector: '[getbyid]',
+    exportAs: 'item',
+    standalone: false
 })
 export class GetByIdDirective {
   data: any;

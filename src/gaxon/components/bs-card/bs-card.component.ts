@@ -12,9 +12,10 @@ interface Image {
 }
 
 @Component({
-  selector: 'bs-card',
-  templateUrl: './bs-card.component.html',
-  styleUrls: ['./bs-card.component.scss']
+    selector: 'bs-card',
+    templateUrl: './bs-card.component.html',
+    styleUrls: ['./bs-card.component.scss'],
+    standalone: false
 })
 export class BsCardComponent implements OnInit, AfterViewInit {
   @ContentChild(CardHeaderComponent) cardHeader;

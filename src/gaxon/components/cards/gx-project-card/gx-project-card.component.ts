@@ -1,9 +1,10 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'gx-project-card',
-  templateUrl: './gx-project-card.component.html',
-  styleUrls: ['./gx-project-card.component.scss']
+    selector: 'gx-project-card',
+    templateUrl: './gx-project-card.component.html',
+    styleUrls: ['./gx-project-card.component.scss'],
+    standalone: false
 })
 export class GxProjectCardComponent implements OnInit {
   @Input() cardTitle: string;

@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-activities',
-  templateUrl: './gx-activities.component.html',
-  styleUrls: ['./gx-activities.component.scss']
+    selector: 'gx-activities',
+    templateUrl: './gx-activities.component.html',
+    styleUrls: ['./gx-activities.component.scss'],
+    standalone: false
 })
 export class GxActivitiesComponent implements OnInit {
   @Input() title: string;

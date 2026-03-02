@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-tasks-report',
-  templateUrl: './gx-tasks-report.component.html',
-  styleUrls: ['./gx-tasks-report.component.scss']
+    selector: 'gx-tasks-report',
+    templateUrl: './gx-tasks-report.component.html',
+    styleUrls: ['./gx-tasks-report.component.scss'],
+    standalone: false
 })
 export class GxTasksReportComponent implements OnInit {
   @Input() tasks: any;

@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-social-card',
-  templateUrl: './gx-social-card.component.html',
-  styleUrls: ['./gx-social-card.component.scss']
+    selector: 'gx-social-card',
+    templateUrl: './gx-social-card.component.html',
+    styleUrls: ['./gx-social-card.component.scss'],
+    standalone: false
 })
 export class GxSocialCardComponent implements OnInit {
   @Input() title: string;

@@ -4,9 +4,10 @@ import {SettingsService} from '@app/settings/settings.service';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'my-notifications',
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss']
+    selector: 'my-notifications',
+    templateUrl: './notifications.component.html',
+    styleUrls: ['./notifications.component.scss'],
+    standalone: false
 })
 export class NotificationsComponent implements OnInit, OnDestroy {
   notifications: any[] = [];

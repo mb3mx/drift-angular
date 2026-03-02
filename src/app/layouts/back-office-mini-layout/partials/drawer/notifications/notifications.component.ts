@@ -3,9 +3,10 @@ import {AppService} from '@app/app.service';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'drawer-notifications',
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss']
+    selector: 'drawer-notifications',
+    templateUrl: './notifications.component.html',
+    styleUrls: ['./notifications.component.scss'],
+    standalone: false
 })
 export class DrawerNotificationsComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-notification';

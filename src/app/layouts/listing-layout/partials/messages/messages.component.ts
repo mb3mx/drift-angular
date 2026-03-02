@@ -4,9 +4,10 @@ import {SettingsService} from '@app/settings/settings.service';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'my-messages',
-  templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.scss']
+    selector: 'my-messages',
+    templateUrl: './messages.component.html',
+    styleUrls: ['./messages.component.scss'],
+    standalone: false
 })
 export class MessagesComponent implements OnInit, OnDestroy {
   messages: any[] = [];

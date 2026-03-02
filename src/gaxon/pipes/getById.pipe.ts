@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'getById'
+    name: 'getById',
+    standalone: false
 })
 export class GetByIdPipe implements PipeTransform {
 

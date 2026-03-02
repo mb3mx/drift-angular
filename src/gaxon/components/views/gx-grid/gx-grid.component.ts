@@ -5,9 +5,10 @@ import {GxGridHeaderComponent} from './gx-grid-header/gx-grid-header.component';
 import {GxGridFooterComponent} from './gx-grid-footer/gx-grid-footer.component';
 
 @Component({
-  selector: 'gx-grid',
-  templateUrl: './gx-grid.component.html',
-  styleUrls: ['./gx-grid.component.scss']
+    selector: 'gx-grid',
+    templateUrl: './gx-grid.component.html',
+    styleUrls: ['./gx-grid.component.scss'],
+    standalone: false
 })
 export class GxGridComponent {
   @ContentChild(GxGridHeaderComponent) gridHeader;

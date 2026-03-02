@@ -1,8 +1,9 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-ibox',
-  templateUrl: './gx-ibox.component.html'
+    selector: 'gx-ibox',
+    templateUrl: './gx-ibox.component.html',
+    standalone: false
 })
 export class GxIboxComponent {
   defaultClasses = ['card', 'text-center'];

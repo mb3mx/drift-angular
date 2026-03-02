@@ -8,10 +8,11 @@ import {LayoutConfig} from './layout.config';
 import {NavigationModel} from './navigation/navigation.model';
 
 @Component({
-  selector: 'app-crm-layout',
-  templateUrl: './crm-layout.component.html',
-  styleUrls: ['./crm-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-crm-layout',
+    templateUrl: './crm-layout.component.html',
+    styleUrls: ['./crm-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class CrmLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';

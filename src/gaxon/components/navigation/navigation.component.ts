@@ -3,10 +3,11 @@ import {NavigationService} from './navigation.service';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    styleUrls: ['./navigation.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class NavigationComponent implements OnDestroy {
   @Input('layout') layout = 'vertical';

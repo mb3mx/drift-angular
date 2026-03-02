@@ -3,8 +3,8 @@ import {Component, Input} from '@angular/core';
 //import {ChartEvent, ChartType, ResponsiveOptions} from 'ng-chartist';
 
 @Component({
-  selector: 'gx-chartist-chart',
-  template: `
+    selector: 'gx-chartist-chart',
+    template: `
     <!--x-chartist
       [type]="type"
       [data]="data"
@@ -12,7 +12,8 @@ import {Component, Input} from '@angular/core';
       [responsiveOptions]="responsiveOptions"
       [events]="events"
       [ngClass]="classNames"
-    ></x-chartist-->`
+    ></x-chartist-->`,
+    standalone: false
 })
 export class GxChartistChartComponent {
   //@Input() data: IChartistData;

@@ -8,10 +8,11 @@ import {LayoutConfig} from './layout.config';
 import {NavigationModel} from './navigation/navigation.model';
 
 @Component({
-  selector: 'app-modern-layout',
-  templateUrl: './modern-layout.component.html',
-  styleUrls: ['./modern-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-modern-layout',
+    templateUrl: './modern-layout.component.html',
+    styleUrls: ['./modern-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';

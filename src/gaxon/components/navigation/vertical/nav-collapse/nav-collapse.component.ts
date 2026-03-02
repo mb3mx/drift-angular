@@ -4,10 +4,11 @@ import {appAnimations} from '../../../../mix/animations';
 import {NavigationService} from './../../navigation.service';
 
 @Component({
-  selector: 'app-nav-vertical-collapse',
-  templateUrl: './nav-collapse.component.html',
-  styleUrls: ['./nav-collapse.component.scss'],
-  animations: appAnimations
+    selector: 'app-nav-vertical-collapse',
+    templateUrl: './nav-collapse.component.html',
+    styleUrls: ['./nav-collapse.component.scss'],
+    animations: appAnimations,
+    standalone: false
 })
 export class NavVerticalCollapseComponent implements OnInit {
   @HostBinding('class') classes = 'nav-collapse dt-side-nav__item';

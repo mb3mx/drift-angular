@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-crepto-news',
-  templateUrl: './gx-crepto-news.component.html',
-  styleUrls: ['./gx-crepto-news.component.scss']
+    selector: 'gx-crepto-news',
+    templateUrl: './gx-crepto-news.component.html',
+    styleUrls: ['./gx-crepto-news.component.scss'],
+    standalone: false
 })
 export class GxCreptoNewsComponent implements OnInit {
   @Input() title: string;

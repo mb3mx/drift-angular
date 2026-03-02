@@ -4,9 +4,10 @@ import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 import {Task} from './task';
 
 @Component({
-  selector: 'gx-my-tasks',
-  templateUrl: './gx-my-tasks.component.html',
-  styleUrls: ['./gx-my-tasks.component.scss']
+    selector: 'gx-my-tasks',
+    templateUrl: './gx-my-tasks.component.html',
+    styleUrls: ['./gx-my-tasks.component.scss'],
+    standalone: false
 })
 export class GxMyTasksComponent implements OnInit {
   @Input() tasks: Task[];

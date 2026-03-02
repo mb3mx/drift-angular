@@ -4,9 +4,10 @@ import {GxListFooterComponent} from './gx-list-footer/gx-list-footer.component';
 import {GxSliderComponent} from './../../widgets/gx-slider/gx-slider.component';
 
 @Component({
-  selector: 'gx-list',
-  templateUrl: './gx-list.component.html',
-  styleUrls: ['./gx-list.component.scss']
+    selector: 'gx-list',
+    templateUrl: './gx-list.component.html',
+    styleUrls: ['./gx-list.component.scss'],
+    standalone: false
 })
 export class GxListComponent implements OnInit {
   @ContentChild(GxListHeaderComponent) listHeader;

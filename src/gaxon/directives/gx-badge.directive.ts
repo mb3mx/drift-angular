@@ -1,7 +1,8 @@
 import {Directive, ElementRef, Input} from '@angular/core';
 
 @Directive({
-  selector: '[gxBadge]'
+    selector: '[gxBadge]',
+    standalone: false
 })
 export class GxBadgeDirective {
 

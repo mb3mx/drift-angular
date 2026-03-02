@@ -9,10 +9,11 @@ import {NavigationModel} from './navigation/navigation.model';
 import {HeaderMenuModel} from './navigation/header-menu.model';
 
 @Component({
-  selector: 'app-listing-layout',
-  templateUrl: './listing-layout.component.html',
-  styleUrls: ['./listing-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-listing-layout',
+    templateUrl: './listing-layout.component.html',
+    styleUrls: ['./listing-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class ListingLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';

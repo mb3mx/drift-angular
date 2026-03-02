@@ -8,9 +8,10 @@ interface MediaImage {
 }
 
 @Component({
-  selector: 'bs-media-object',
-  templateUrl: './bs-media-object.component.html',
-  styles: []
+    selector: 'bs-media-object',
+    templateUrl: './bs-media-object.component.html',
+    styles: [],
+    standalone: false
 })
 export class BsMediaObjectComponent implements OnInit, AfterViewInit {
   @Input('heading') heading: any;

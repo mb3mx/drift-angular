@@ -22,9 +22,10 @@ interface TrendingCard {
 }
 
 @Component({
-  selector: 'gx-trending-card',
-  templateUrl: './gx-trending-card.component.html',
-  styleUrls: ['./gx-trending-card.component.scss']
+    selector: 'gx-trending-card',
+    templateUrl: './gx-trending-card.component.html',
+    styleUrls: ['./gx-trending-card.component.scss'],
+    standalone: false
 })
 export class GxTrendingCardComponent implements OnInit {
   classNames = ['dt-chart'];

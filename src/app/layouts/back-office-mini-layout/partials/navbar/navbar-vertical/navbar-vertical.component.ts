@@ -6,9 +6,10 @@ import {DrawerService} from '../../../drawer.service';
 import {AuthService} from '@app/layouts/auth-layout/auth.service';
 
 @Component({
-  selector: 'app-navbar-vertical',
-  templateUrl: './navbar-vertical.component.html',
-  styleUrls: ['./navbar-vertical.component.scss']
+    selector: 'app-navbar-vertical',
+    templateUrl: './navbar-vertical.component.html',
+    styleUrls: ['./navbar-vertical.component.scss'],
+    standalone: false
 })
 export class NavbarVerticalComponent implements OnInit, OnDestroy {
   settings: any;

@@ -1,7 +1,8 @@
 import {Directive, ElementRef, Input} from '@angular/core';
 
 @Directive({
-  selector: '[gxCard]'
+    selector: '[gxCard]',
+    standalone: false
 })
 export class GxCardDirective {
 

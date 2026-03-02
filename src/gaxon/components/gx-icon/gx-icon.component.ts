@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-icon',
-  template: `
-    <ng-content></ng-content>`
+    selector: 'gx-icon',
+    template: `
+    <ng-content></ng-content>`,
+    standalone: false
 })
 export class GxIconComponent {
   private _previewsName: string;

@@ -4,9 +4,10 @@ import {SettingsService} from '@app/settings/settings.service';
 import {DrawerService} from '../../drawer.service';
 
 @Component({
-  selector: 'app-drawer',
-  templateUrl: './drawer.component.html',
-  styleUrls: ['./drawer.component.scss']
+    selector: 'app-drawer',
+    templateUrl: './drawer.component.html',
+    styleUrls: ['./drawer.component.scss'],
+    standalone: false
 })
 export class DrawerComponent implements OnInit, OnDestroy {
   settings: any;

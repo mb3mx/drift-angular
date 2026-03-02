@@ -19,9 +19,10 @@ interface ProgressCard {
 }
 
 @Component({
-  selector: 'gx-progress-card',
-  templateUrl: './gx-progress-card.component.html',
-  styleUrls: ['./gx-progress-card.component.scss']
+    selector: 'gx-progress-card',
+    templateUrl: './gx-progress-card.component.html',
+    styleUrls: ['./gx-progress-card.component.scss'],
+    standalone: false
 })
 export class GxProgressCardComponent implements OnInit {
 

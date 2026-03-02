@@ -2,7 +2,8 @@ import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
     selector: 'gx-slider-card',
-    templateUrl: './gx-slider-card.component.html'
+    templateUrl: './gx-slider-card.component.html',
+    standalone: false
 })
 export class GxSliderCardComponent implements OnInit {
     @Input() data: any;

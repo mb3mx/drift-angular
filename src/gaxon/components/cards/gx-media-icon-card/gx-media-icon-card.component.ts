@@ -3,6 +3,7 @@ import {Component, HostBinding, Input, OnInit} from '@angular/core';
 @Component({
     selector: 'gx-media-icon-card',
     templateUrl: './gx-media-icon-card.component.html',
+    standalone: false
 })
 export class GxMediaIconCardComponent implements OnInit {
 

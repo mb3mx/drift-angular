@@ -1,8 +1,9 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-info-panel-card',
-  templateUrl: './gx-info-panel-card.component.html',
+    selector: 'gx-info-panel-card',
+    templateUrl: './gx-info-panel-card.component.html',
+    standalone: false
 })
 export class GxInfoPanelCardComponent {
   @Input() bodyClasses: string;

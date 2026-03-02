@@ -21,8 +21,9 @@ interface CryptoCard {
 }
 
 @Component({
-  selector: 'gx-crypto-card',
-  templateUrl: './gx-crypto-card.component.html'
+    selector: 'gx-crypto-card',
+    templateUrl: './gx-crypto-card.component.html',
+    standalone: false
 })
 export class GxCryptoCardComponent implements OnInit {
   @Input() data: CryptoCard;

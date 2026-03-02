@@ -1,9 +1,10 @@
 import {AfterViewInit, Component, ElementRef, OnInit, Renderer2} from '@angular/core';
 
 @Component({
-  selector: 'bs-card-footer',
-  template: `<ng-content></ng-content>`,
-  styles: [':host{display: block;}']
+    selector: 'bs-card-footer',
+    template: `<ng-content></ng-content>`,
+    styles: [':host{display: block;}'],
+    standalone: false
 })
 export class CardFooterComponent implements OnInit, AfterViewInit {
 

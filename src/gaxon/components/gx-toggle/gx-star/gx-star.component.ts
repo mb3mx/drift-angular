@@ -3,9 +3,10 @@ import {Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output
 let nextUniqueId = 0;
 
 @Component({
-  selector: 'gx-star',
-  templateUrl: './gx-star.component.html',
-  styleUrls: ['./gx-star.component.scss']
+    selector: 'gx-star',
+    templateUrl: './gx-star.component.html',
+    styleUrls: ['./gx-star.component.scss'],
+    standalone: false
 })
 export class GxStarComponent implements OnInit {
   @Input() gxModel: boolean;

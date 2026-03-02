@@ -1,9 +1,10 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'card-heading',
-  template: `<ng-content></ng-content>`,
-  styles: [':host{display: block;}']
+    selector: 'card-heading',
+    template: `<ng-content></ng-content>`,
+    styles: [':host{display: block;}'],
+    standalone: false
 })
 export class CardHeadingComponent implements OnInit {
 

@@ -2,9 +2,10 @@ import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
-  selector: 'gx-client-card',
-  templateUrl: './gx-client-card.component.html',
-  styleUrls: ['./gx-client-card.component.scss']
+    selector: 'gx-client-card',
+    templateUrl: './gx-client-card.component.html',
+    styleUrls: ['./gx-client-card.component.scss'],
+    standalone: false
 })
 export class GxClientCardComponent implements OnInit {
   @Input() client: any;

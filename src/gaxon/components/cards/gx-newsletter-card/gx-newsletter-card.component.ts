@@ -2,9 +2,10 @@ import {Component, ElementRef, EventEmitter, Input, Output} from '@angular/core'
 import {NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'gx-newsletter-card',
-  templateUrl: './gx-newsletter-card.component.html',
-  styleUrls: ['./gx-newsletter-card.component.scss']
+    selector: 'gx-newsletter-card',
+    templateUrl: './gx-newsletter-card.component.html',
+    styleUrls: ['./gx-newsletter-card.component.scss'],
+    standalone: false
 })
 export class GxNewsletterCardComponent {
   @Input() bodyClasses: string;

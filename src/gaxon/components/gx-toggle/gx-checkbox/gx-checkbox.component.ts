@@ -3,9 +3,10 @@ import {Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output
 let nextUniqueId = 0;
 
 @Component({
-  selector: 'gx-checkbox',
-  templateUrl: './gx-checkbox.component.html',
-  styleUrls: ['./gx-checkbox.component.scss']
+    selector: 'gx-checkbox',
+    templateUrl: './gx-checkbox.component.html',
+    styleUrls: ['./gx-checkbox.component.scss'],
+    standalone: false
 })
 export class GxCheckboxComponent implements OnInit {
   @Input() gxModel: boolean;

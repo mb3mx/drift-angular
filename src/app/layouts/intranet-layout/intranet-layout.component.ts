@@ -8,10 +8,11 @@ import {LayoutConfig} from './layout.config';
 import {NavigationModel} from './navigation/navigation.model';
 
 @Component({
-  selector: 'app-intranet-layout',
-  templateUrl: './intranet-layout.component.html',
-  styleUrls: ['./intranet-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-intranet-layout',
+    templateUrl: './intranet-layout.component.html',
+    styleUrls: ['./intranet-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class IntranetLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';

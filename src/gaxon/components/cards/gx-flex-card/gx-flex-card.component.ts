@@ -10,8 +10,9 @@ interface Intro {
 }
 
 @Component({
-  selector: 'gx-flex-card',
-  templateUrl: './gx-flex-card.component.html'
+    selector: 'gx-flex-card',
+    templateUrl: './gx-flex-card.component.html',
+    standalone: false
 })
 export class GxFlexCardComponent implements OnInit {
   @Input() data: Intro;

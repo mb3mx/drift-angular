@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import {GxHelper} from './../helpers';
 
 @Pipe({
-  name: 'filter'
+    name: 'filter',
+    standalone: false
 })
 export class FilterPipe implements PipeTransform {
 

@@ -3,9 +3,10 @@ import {NavigationEnd, Router} from '@angular/router';
 import {NavigationService} from './../../navigation.service';
 
 @Component({
-  selector: 'app-nav-horizontal-mega',
-  templateUrl: './nav-mega.component.html',
-  styleUrls: ['./nav-mega.component.scss']
+    selector: 'app-nav-horizontal-mega',
+    templateUrl: './nav-mega.component.html',
+    styleUrls: ['./nav-mega.component.scss'],
+    standalone: false
 })
 export class NavHorizontalMegaComponent implements OnInit {
   @HostBinding('class') classes = 'nav-item mega-menu';

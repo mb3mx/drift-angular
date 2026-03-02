@@ -3,9 +3,10 @@ import {Subscription} from 'rxjs';
 import {SettingsService} from '@app/settings/settings.service';
 
 @Component({
-  selector: 'app-blank',
-  templateUrl: './blank.component.html',
-  styleUrls: ['./blank.component.scss']
+    selector: 'app-blank',
+    templateUrl: './blank.component.html',
+    styleUrls: ['./blank.component.scss'],
+    standalone: false
 })
 export class BlankComponent implements OnInit, OnDestroy {
   settings: any;

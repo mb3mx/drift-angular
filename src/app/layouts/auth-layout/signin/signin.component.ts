@@ -3,9 +3,10 @@ import {FormControl, NgForm} from '@angular/forms';
 import {AuthService} from '../auth.service';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+    selector: 'app-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: ['./signin.component.scss'],
+    standalone: false
 })
 export class SigninComponent {
   email = new FormControl('demo@example.com');

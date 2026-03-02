@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-download-apps-card',
-  templateUrl: './gx-download-apps-card.component.html',
-  styleUrls: ['./gx-download-apps-card.component.scss']
+    selector: 'gx-download-apps-card',
+    templateUrl: './gx-download-apps-card.component.html',
+    styleUrls: ['./gx-download-apps-card.component.scss'],
+    standalone: false
 })
 export class GxDownloadAppsCardComponent implements OnInit {
   @Input() cardData: any;

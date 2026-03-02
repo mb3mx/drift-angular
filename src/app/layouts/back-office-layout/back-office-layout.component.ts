@@ -8,10 +8,11 @@ import {LayoutConfig} from './layout.config';
 import {NavigationModel} from './navigation/navigation.model';
 
 @Component({
-  selector: 'app-back-office-layout',
-  templateUrl: './back-office-layout.component.html',
-  styleUrls: ['./back-office-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-back-office-layout',
+    templateUrl: './back-office-layout.component.html',
+    styleUrls: ['./back-office-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class BackOfficeLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';

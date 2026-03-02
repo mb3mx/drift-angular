@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-top-vendors',
-  templateUrl: './gx-top-vendors.component.html',
-  styleUrls: ['./gx-top-vendors.component.scss']
+    selector: 'gx-top-vendors',
+    templateUrl: './gx-top-vendors.component.html',
+    styleUrls: ['./gx-top-vendors.component.scss'],
+    standalone: false
 })
 export class GxTopVendorsComponent {
   categories = [

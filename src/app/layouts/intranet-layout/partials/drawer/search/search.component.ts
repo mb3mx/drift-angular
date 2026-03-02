@@ -5,9 +5,10 @@ import {Subscription} from 'rxjs';
 import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 
 @Component({
-  selector: 'drawer-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+    selector: 'drawer-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.scss'],
+    standalone: false
 })
 export class DrawerSearchComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-notification';

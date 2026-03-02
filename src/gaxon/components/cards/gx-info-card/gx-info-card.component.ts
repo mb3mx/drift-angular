@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-info-card',
-  templateUrl: './gx-info-card.component.html',
-  styleUrls: ['./gx-info-card.component.scss']
+    selector: 'gx-info-card',
+    templateUrl: './gx-info-card.component.html',
+    styleUrls: ['./gx-info-card.component.scss'],
+    standalone: false
 })
 export class GxInfoCardComponent implements OnInit{
   @Input() bodyClasses: string;

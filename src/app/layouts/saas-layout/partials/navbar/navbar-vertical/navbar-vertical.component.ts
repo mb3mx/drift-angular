@@ -3,10 +3,11 @@ import {Subscription} from 'rxjs';
 import {SettingsService} from '@app/settings/settings.service';
 
 @Component({
-  selector: 'app-navbar-vertical',
-  templateUrl: './navbar-vertical.component.html',
-  styleUrls: ['./navbar-vertical.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-navbar-vertical',
+    templateUrl: './navbar-vertical.component.html',
+    styleUrls: ['./navbar-vertical.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class NavbarVerticalComponent implements OnInit, OnDestroy {
   settings: any;

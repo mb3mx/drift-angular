@@ -10,9 +10,10 @@ interface Intro {
 }
 
 @Component({
-  selector: 'gx-intro-card',
-  templateUrl: './gx-intro-card.component.html',
-  styleUrls: ['./gx-intro-card.component.scss']
+    selector: 'gx-intro-card',
+    templateUrl: './gx-intro-card.component.html',
+    styleUrls: ['./gx-intro-card.component.scss'],
+    standalone: false
 })
 export class GxIntroCardComponent implements OnInit {
   @Input() titlePos: string = 'top';

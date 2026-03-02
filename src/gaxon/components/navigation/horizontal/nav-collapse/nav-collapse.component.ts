@@ -4,9 +4,10 @@ import {NavigationService} from './../../navigation.service';
 
 
 @Component({
-  selector: 'app-nav-horizontal-collapse',
-  templateUrl: './nav-collapse.component.html',
-  styleUrls: ['./nav-collapse.component.scss']
+    selector: 'app-nav-horizontal-collapse',
+    templateUrl: './nav-collapse.component.html',
+    styleUrls: ['./nav-collapse.component.scss'],
+    standalone: false
 })
 export class NavHorizontalCollapseComponent implements OnInit {
   @HostBinding('class') classes = 'nav-collapse nav-item';

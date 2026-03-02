@@ -18,9 +18,10 @@ interface CounterData {
 }
 
 @Component({
-  selector: 'gx-counter-card',
-  templateUrl: './gx-counter-card.component.html',
-  styleUrls: ['./gx-counter-card.component.scss']
+    selector: 'gx-counter-card',
+    templateUrl: './gx-counter-card.component.html',
+    styleUrls: ['./gx-counter-card.component.scss'],
+    standalone: false
 })
 export class GxCounterCardComponent implements OnInit {
   @Input() data: CounterData;

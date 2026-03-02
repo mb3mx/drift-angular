@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-analytic-card',
-  templateUrl: './gx-analytic-card.component.html',
-  styleUrls: ['./gx-analytic-card.component.scss']
+    selector: 'gx-analytic-card',
+    templateUrl: './gx-analytic-card.component.html',
+    styleUrls: ['./gx-analytic-card.component.scss'],
+    standalone: false
 })
 export class GxAnalyticCardComponent {
   @Input() title: string;

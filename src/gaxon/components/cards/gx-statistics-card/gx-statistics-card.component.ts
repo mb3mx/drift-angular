@@ -23,9 +23,10 @@ interface StatisticsCard {
 }
 
 @Component({
-  selector: 'gx-statistics-card',
-  templateUrl: './gx-statistics-card.component.html',
-  styleUrls: ['./gx-statistics-card.component.scss']
+    selector: 'gx-statistics-card',
+    templateUrl: './gx-statistics-card.component.html',
+    styleUrls: ['./gx-statistics-card.component.scss'],
+    standalone: false
 })
 export class GxStatisticsCardComponent implements OnInit {
   @Input() data: StatisticsCard;

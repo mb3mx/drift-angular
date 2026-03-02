@@ -1,8 +1,9 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-info-classic-card',
-  templateUrl: './gx-info-classic-card.component.html',
+    selector: 'gx-info-classic-card',
+    templateUrl: './gx-info-classic-card.component.html',
+    standalone: false
 })
 export class GxInfoClassicCardComponent {
   @Input() bodyClasses: string;

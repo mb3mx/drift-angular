@@ -1,7 +1,8 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-    name: 'thousandSuff'
+    name: 'thousandSuff',
+    standalone: false
 })
 export class ThousandSuffixesPipe implements PipeTransform {
     transform(input: any, args?: any): any {

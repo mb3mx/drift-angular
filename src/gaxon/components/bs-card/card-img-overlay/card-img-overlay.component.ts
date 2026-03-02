@@ -2,14 +2,15 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit} from '@angular/core
 import {Renderer2} from '@angular/core';
 
 @Component({
-  selector: 'bs-card-img-overlay',
-  template: `
+    selector: 'bs-card-img-overlay',
+    template: `
     <h3 *ngIf="cardTitle" class="card-title" [innerHTML]="cardTitle"></h3>
     <h5 *ngIf="cardSubTitle" class="card-subtitle mb-2 text-muted" [innerHTML]="cardSubTitle"></h5>
     <p *ngIf="cardText" class="card-text" [innerHTML]="cardText"></p>
     <ng-content></ng-content>
   `,
-  styles: [':host{display: block;}']
+    styles: [':host{display: block;}'],
+    standalone: false
 })
 export class CardImgOverlayComponent implements OnInit, AfterViewInit {
   @Input('card-title') cardTitle: any = '';

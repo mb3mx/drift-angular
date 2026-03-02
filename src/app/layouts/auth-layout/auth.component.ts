@@ -5,10 +5,11 @@ import {DOCUMENT} from '@angular/common';
 import {LayoutConfig} from './layout.config';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-auth',
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class AuthComponent implements OnInit, OnDestroy {
   @HostBinding('class') classlist = 'dt-root__inner';

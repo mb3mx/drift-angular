@@ -1,7 +1,8 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'oneLetter'
+    name: 'oneLetter',
+    standalone: false
 })
 export class OneLetterPipe implements PipeTransform {
 

@@ -1,9 +1,10 @@
 import {Component, ElementRef, HostBinding, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-chart-overlay',
-  templateUrl: './gx-chart-overlay.component.html',
-  styleUrls: ['./gx-chart-overlay.component.scss']
+    selector: 'gx-chart-overlay',
+    templateUrl: './gx-chart-overlay.component.html',
+    styleUrls: ['./gx-chart-overlay.component.scss'],
+    standalone: false
 })
 export class GxChartOverlayComponent {
   @HostBinding('class.dt-chart__reveal') isOverlayOut = false;

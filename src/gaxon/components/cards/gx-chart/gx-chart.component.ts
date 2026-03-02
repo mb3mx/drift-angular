@@ -1,9 +1,10 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'gx-chart',
-  templateUrl: './gx-chart.component.html',
-  styles: [':host{display: block}']
+    selector: 'gx-chart',
+    templateUrl: './gx-chart.component.html',
+    styles: [':host{display: block}'],
+    standalone: false
 })
 export class GxChartComponent implements OnInit {
   @Input() labels: Array<any>;

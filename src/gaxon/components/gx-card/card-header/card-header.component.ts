@@ -1,8 +1,9 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'card-header',
-  templateUrl: './card-header.component.html'
+    selector: 'card-header',
+    templateUrl: './card-header.component.html',
+    standalone: false
 })
 export class CardHeaderComponent implements OnInit {
   @Input('card-title') cardTitle: any = '';

@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2} from '@angular/core';
 
 @Component({
-  selector: 'bs-card-body',
-  template: `
+    selector: 'bs-card-body',
+    template: `
     <ng-container>
       <h3 *ngIf="cardTitle" class="card-title" [innerHTML]="cardTitle"></h3>
       <h5 *ngIf="cardSubTitle" class="card-subtitle mb-2 text-muted" [innerHTML]="cardSubTitle"></h5>
@@ -10,7 +10,8 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2} from '@a
       <ng-content></ng-content>
     </ng-container>
   `,
-  styles: [':host{display: block;}']
+    styles: [':host{display: block;}'],
+    standalone: false
 })
 export class CardBodyComponent implements OnInit, AfterViewInit {
   @Input('card-title') cardTitle: any = '';

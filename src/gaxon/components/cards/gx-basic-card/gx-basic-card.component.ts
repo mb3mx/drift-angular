@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-basic-card',
-  templateUrl: './gx-basic-card.component.html',
-  styleUrls: ['./gx-basic-card.component.scss']
+    selector: 'gx-basic-card',
+    templateUrl: './gx-basic-card.component.html',
+    styleUrls: ['./gx-basic-card.component.scss'],
+    standalone: false
 })
 export class GxBasicCardComponent {
   @Input() bodyClasses: string = 'text-center';

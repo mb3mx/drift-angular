@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-media-card',
-  templateUrl: './gx-media-card.component.html',
-  styleUrls: ['./gx-media-card.component.scss']
+    selector: 'gx-media-card',
+    templateUrl: './gx-media-card.component.html',
+    styleUrls: ['./gx-media-card.component.scss'],
+    standalone: false
 })
 export class GxMediaCardComponent {
   @Input() bodyClasses: string;

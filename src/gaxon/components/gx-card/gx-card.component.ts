@@ -3,9 +3,10 @@ import {CardHeadingComponent} from './card-heading/card-heading.component';
 import {CardToolComponent} from './card-tool/card-tool.component';
 
 @Component({
-  selector: 'gx-card',
-  templateUrl: './gx-card.component.html',
-  styleUrls: ['./gx-card.component.scss']
+    selector: 'gx-card',
+    templateUrl: './gx-card.component.html',
+    styleUrls: ['./gx-card.component.scss'],
+    standalone: false
 })
 export class GxCardComponent implements OnInit {
   @ContentChild(CardHeadingComponent) cardHeading;

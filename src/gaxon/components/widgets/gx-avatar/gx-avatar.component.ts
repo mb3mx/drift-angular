@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-avatar',
-  templateUrl: './gx-avatar.component.html',
-  styleUrls: ['./gx-avatar.component.scss']
+    selector: 'gx-avatar',
+    templateUrl: './gx-avatar.component.html',
+    styleUrls: ['./gx-avatar.component.scss'],
+    standalone: false
 })
 export class GxAvatarComponent implements OnInit {
   @Input() avatarClass = '';

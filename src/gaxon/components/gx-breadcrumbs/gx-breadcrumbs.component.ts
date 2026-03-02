@@ -7,9 +7,10 @@ interface BreadcrumbItem {
 }
 
 @Component({
-  selector: 'gx-breadcrumbs',
-  templateUrl: './gx-breadcrumbs.component.html',
-  styles: [':host{display: block;}']
+    selector: 'gx-breadcrumbs',
+    templateUrl: './gx-breadcrumbs.component.html',
+    styles: [':host{display: block;}'],
+    standalone: false
 })
 export class GxBreadcrumbsComponent {
   @Input() displayAs: string = 'list';

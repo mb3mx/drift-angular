@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'htmlToPlainText'
+    name: 'htmlToPlainText',
+    standalone: false
 })
 export class HtmlToPlainTextPipe implements PipeTransform {
 

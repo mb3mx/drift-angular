@@ -3,9 +3,10 @@ import * as echarts from 'echarts';
 import 'echarts-liquidfill';
 
 @Component({
-  selector: 'gx-echarts-liquidfill',
-  templateUrl: './gx-echarts-liquidfill.component.html',
-  styleUrls: ['./gx-echarts-liquidfill.component.scss']
+    selector: 'gx-echarts-liquidfill',
+    templateUrl: './gx-echarts-liquidfill.component.html',
+    styleUrls: ['./gx-echarts-liquidfill.component.scss'],
+    standalone: false
 })
 export class GxEchartsLiquidfillComponent implements OnInit {
   @ViewChild('realTimeUsers', {static: true}) realTimeUsers: ElementRef;

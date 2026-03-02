@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-entry-header',
-  templateUrl: './entry-header.component.html',
-  styleUrls: ['./entry-header.component.scss']
+    selector: 'app-entry-header',
+    templateUrl: './entry-header.component.html',
+    styleUrls: ['./entry-header.component.scss'],
+    standalone: false
 })
 export class EntryHeaderComponent {
   @Input('heading') heading: any = '';

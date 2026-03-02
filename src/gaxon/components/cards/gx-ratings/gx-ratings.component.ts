@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gx-ratings',
-  templateUrl: './gx-ratings.component.html',
-  styleUrls: ['./gx-ratings.component.scss']
+    selector: 'gx-ratings',
+    templateUrl: './gx-ratings.component.html',
+    styleUrls: ['./gx-ratings.component.scss'],
+    standalone: false
 })
 export class GxRatingsComponent implements OnInit {
   @Input() reviews: any[];

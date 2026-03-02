@@ -1,7 +1,8 @@
 import {Directive, ElementRef, Input} from '@angular/core';
 
 @Directive({
-  selector: '[bsCard]'
+    selector: '[bsCard]',
+    standalone: false
 })
 export class BsCardDirective {
 

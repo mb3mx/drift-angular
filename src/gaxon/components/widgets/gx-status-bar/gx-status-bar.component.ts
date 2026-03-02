@@ -5,9 +5,10 @@ import {switchMap, startWith, scan, takeWhile, takeUntil, mapTo} from 'rxjs/oper
 import {appAnimations} from '../../../mix/animations';
 
 @Component({
-  selector: 'gx-status-bar',
-  templateUrl: './gx-status-bar.component.html',
-  animations: appAnimations
+    selector: 'gx-status-bar',
+    templateUrl: './gx-status-bar.component.html',
+    animations: appAnimations,
+    standalone: false
 })
 export class GxStatusBarComponent implements OnInit, OnDestroy {
   @Input() prefix = '';

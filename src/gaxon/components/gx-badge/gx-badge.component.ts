@@ -1,9 +1,10 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
-  selector: 'gx-badge',
-  template: `
-    <ng-content></ng-content>`
+    selector: 'gx-badge',
+    template: `
+    <ng-content></ng-content>`,
+    standalone: false
 })
 export class GxBadgeComponent {
 

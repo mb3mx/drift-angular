@@ -9,10 +9,11 @@ import {NavigationModel} from './navigation/navigation.model';
 import {HeaderMenuModel} from './navigation/header-menu.model';
 
 @Component({
-  selector: 'app-saas-layout',
-  templateUrl: './saas-layout.component.html',
-  styleUrls: ['./saas-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-saas-layout',
+    templateUrl: './saas-layout.component.html',
+    styleUrls: ['./saas-layout.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class SaasLayoutComponent implements OnInit, OnDestroy {
   @HostBinding('class') classNames = 'dt-root__inner';
